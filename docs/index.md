@@ -135,3 +135,34 @@ $$
 $$
 
 이 과정을 통해 보드의 아랫줄에만 켜진 전구가 남게 되었다. 켜진 전구의 조합에 따라 가장 윗줄의 스위치를 토글하는데, 어떤 것을 토글해야 하는지는 이제 구해야 한다.
+
+#### Chasing Light 2단계(가장 윗줄 토글해서 아랫줄 지우기)를 행렬로 옮기기
+
+가장 윗줄의 스위치($x_1$, $x_2$)를 적당히 토글한 후 1단계와 같은 방법을 다시 사용하면 가장 아랫줄의 켜진 전구도 모두 끌 수 있다. 어떤 것은 누르고 어떤 것은 누르지 않을지는 다음 식을 통해 구한다.
+
+$$
+\displaylines{
+\mathbf{b}_0=A\begin{pmatrix}1&0&0&0\end{pmatrix}^T=\begin{pmatrix}1&1&1&0\end{pmatrix}^T\\
+\mathbf{b}_1=\mathbf{b}_0+A\mathbf{x}_1=\begin{pmatrix}1\\1\\1\\0\end{pmatrix}+\begin{pmatrix}Z&I\\I&Z\end{pmatrix}\begin{pmatrix}0\\0\\1\\1\end{pmatrix}=\begin{pmatrix}0\\0\\1\\0\end{pmatrix}
+}
+$$
+
+왼쪽 위의 스위치($x_1$)를 토글하고 1단계 방법을 통해서 다시 아랫줄의 전구만 남기는 과정을 계산해보았더니 위와 같이 되었다. 이 때 누른 모든 스위치를 $\chi_1$, 남는 보드를 $\beta_1$라고 써보면 아래와 같은 식을 만족한다.
+
+$$
+\displaylines{
+\chi_1=\begin{pmatrix}1&0&0&0\end{pmatrix}^T+\mathbf{x}_1=\begin{pmatrix}1&0&1&1\end{pmatrix}^T\\
+\beta_1=\mathbf{b}_1=\begin{pmatrix}0&0&1&0\end{pmatrix}^T
+}
+$$
+
+마찬가지의 방법으로 $\chi_2$와 $\beta_2$를 구해보면 아래와 같다.
+
+$$
+\displaylines{
+\chi_2=\begin{pmatrix}0&1&1&1\end{pmatrix}^T
+\beta_2=\begin{pmatrix}0&0&0&1\end{pmatrix}^T
+}
+$$
+
+이제 구한 $beta_i$와 $chi_i$를 사용하여 최종 해를 구하는 과정을 나타내보겠다.
