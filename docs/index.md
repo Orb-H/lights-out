@@ -13,6 +13,16 @@ MathJax = {
 </script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/nanumgothic.css">
+<style>
+body{
+    font-family: 'Myriad Pro', 'Noto Sans KR', Calibri, Helvetica, Arial, sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Lucida Grande', 'Nanum Gothic', Calibri, Helvetica, Arial, sans-serif
+}
+</style>
 
 사실 백준 [14939번 - 불 끄기](http://noj.am/14939) 문제를 보고 생각난거 적는 사이트입니다. 논문 아님
 
