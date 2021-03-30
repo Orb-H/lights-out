@@ -20,7 +20,7 @@ body{
     font-family: 'Noto Sans KR', Calibri, Helvetica, Arial, sans-serif;
 }
 h1,h2,h3,h4,h5,h6{
-    font-family: 'Nanum Barun Gothic', Calibri, Helvetica, Arial, sans-serif;
+    font-family: 'Noto Sans KR', Calibri, Helvetica, Arial, sans-serif;
 }
 </style>
 
