@@ -160,9 +160,9 @@ $$
 
 $$
 \displaylines{
-\chi_2=\begin{pmatrix}0&1&1&1\end{pmatrix}^T
+\chi_2=\begin{pmatrix}0&1&1&1\end{pmatrix}^T\\
 \beta_2=\begin{pmatrix}0&0&0&1\end{pmatrix}^T
 }
 $$
 
-이제 구한 $beta_i$와 $chi_i$를 사용하여 최종 해를 구하는 과정을 나타내보겠다.
+이제 구한 $\beta_i$와 $\chi_i$를 사용하여 최종 해를 구하는 과정을 나타내보겠다.
