@@ -14,13 +14,13 @@ MathJax = {
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/nanumgothic.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/font-nanum/1.0/nanumbarungothic/nanumbarungothic.css">
 <style>
 body{
     font-family: 'Noto Sans KR', Calibri, Helvetica, Arial, sans-serif;
 }
 h1,h2,h3,h4,h5,h6{
-    font-family: 'Nanum Gothic', Calibri, Helvetica, Arial, sans-serif;
+    font-family: 'Nanum Barun Gothic', Calibri, Helvetica, Arial, sans-serif;
 }
 </style>
 
