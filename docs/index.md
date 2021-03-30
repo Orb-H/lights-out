@@ -90,13 +90,20 @@ h1,h2,h3,h4,h5,h6{
 이제 Lights Out 퍼즐에서 스위치를 눌렀을 때 전구가 토글되는 경우 어떤 전구가 토글되는지를 생각해보면 아래와 같은 식을 세울 수 있다.
 
 $$
-\mathbf{b}+A\mathbf{x}=0\newline\matrix{A}=\begin{pmatrix}Z&I&O&O&O\\I&Z&I&O&O\\O&I&Z&I&O\\O&O&I&Z&I\\O&O&O&I&Z\end{pmatrix}\newline Z=\begin{pmatrix}1&1&0&0&0\\1&1&1&0&0\\0&1&1&1&0\\0&0&1&1&1\\0&0&0&1&1\end{pmatrix}
+\displaylines{
+\mathbf{b}+A\mathbf{x}=0\\
+\matrix{A}=\begin{pmatrix}Z&I&O&O&O\\I&Z&I&O&O\\O&I&Z&I&O\\O&O&I&Z&I\\O&O&O&I&Z\end{pmatrix}\\
+Z=\begin{pmatrix}1&1&0&0&0\\1&1&1&0&0\\0&1&1&1&0\\0&0&1&1&1\\0&0&0&1&1\end{pmatrix}
+}
 $$
 
 그리고 $\mathbf{b}$와 $\mathbf{x}$ 모두 $\mathbb{Z}_2^{25}$ 위의 벡터이므로 $A$는 $\mathbb{Z}_2^{25\times 25}$ 상의 행렬일 것이다. 그러면 다음의 식을 만족한다.
 
 $$
-\mathbf{b}+A\mathbf{x}=\mathbf{b}+A\mathbf{x}-2A\mathbf{x}=\mathbf{b}-A\mathbf{x}=0\newline\mathbf{b}=A\mathbf{x}
+\displaylines{
+\mathbf{b}+A\mathbf{x}=\mathbf{b}+A\mathbf{x}-2A\mathbf{x}=\mathbf{b}-A\mathbf{x}=0\\
+\mathbf{b}=A\mathbf{x}
+}
 $$
 
 이제 $\mathbb{Z}_2^{25\times 25}$ 상에서의 $A$의 역행렬을 구하면 $\mathbf{x}=A^{-1}\mathbf{b}$의 식을 사용하여 어떤 스위치를 누르면 퍼즐을 해결할 수 있는지 구할 수 있다.
