@@ -17,10 +17,10 @@ MathJax = {
 <link rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/nanumgothic.css">
 <style>
 body{
-    font-family: 'Myriad Pro', 'Noto Sans KR', Calibri, Helvetica, Arial, sans-serif;
+    font-family: 'Noto Sans KR', Calibri, Helvetica, Arial, sans-serif;
 }
 h1,h2,h3,h4,h5,h6{
-    font-family: 'Lucida Grande', 'Nanum Gothic', Calibri, Helvetica, Arial, sans-serif
+    font-family: 'Nanum Gothic', Calibri, Helvetica, Arial, sans-serif;
 }
 </style>
 
