@@ -127,9 +127,11 @@ Lights Out 퍼즐의 난이도는 보드의 크기가 커질수록 매우 어려
 이제 Chasing Light 방법을 사용하는 것을 행렬로 나타내보겠다. 먼저 가장 윗줄($b_1$과 $b_2$)에 불이 켜져있다면 각각에 대해 $x_3$와 $x_4$를 토글한다. 그 과정을 나타내보면 아래와 같이 된다.
 
 $$
-\displaylines{\mathbf{b}_0=\mathbf{b}\\
+\displaylines{
+\mathbf{b}_0=\mathbf{b}\\
 \mathbf{b}_1=\mathbf{b}_0+A\mathbf{x}_1\\
-\begin{pmatrix}b_{11}\\b_{12}\\b_{13}\\b_{14}\end{pmatrix}=\begin{pmatrix}b_{01}\\b_{02}\\b_{03}\\b_{04}\end{pmatrix}+\begin{pmatrix}Z&I\\I&Z\end{pmatrix}\begin{pmatrix}0\\0\\b_{01}\\b_{02}\end{pmatrix}=\begin{pmatrix}b_{01}+b_{01}\\b_{02}+b_{02}\\b_{03}+b_{01}+b_{02}\\b_{04}+b_{01}+b_{02}\end{pmatrix}=\begin{pmatrix}0\\0\\b_{01}+b_{02}+b_{03}\\b_{01}+b_{02}+b_{04}\end{pmatrix}}
+\begin{pmatrix}b_{11}\\b_{12}\\b_{13}\\b_{14}\end{pmatrix}=\begin{pmatrix}b_{01}\\b_{02}\\b_{03}\\b_{04}\end{pmatrix}+\begin{pmatrix}Z&I\\I&Z\end{pmatrix}\begin{pmatrix}0\\0\\b_{01}\\b_{02}\end{pmatrix}=\begin{pmatrix}b_{01}+b_{01}\\b_{02}+b_{02}\\b_{03}+b_{01}+b_{02}\\b_{04}+b_{01}+b_{02}\end{pmatrix}=\begin{pmatrix}0\\0\\b_{01}+b_{02}+b_{03}\\b_{01}+b_{02}+b_{04}\end{pmatrix}
+}
 $$
 
 이 과정을 통해 보드의 아랫줄에만 켜진 전구가 남게 되었다. 켜진 전구의 조합에 따라 가장 윗줄의 스위치를 토글하는데, 어떤 것을 토글해야 하는지는 이제 구해야 한다.
