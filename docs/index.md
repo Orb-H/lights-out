@@ -212,7 +212,7 @@ c_1\beta_1+c_2\beta_2=c_1A\chi_1+c_2A\chi_2\\
 }
 $$
 
-이제 1단계에서 사용헀던 관계식인 $\mathbf{b}_1=\mathbf{b}_0+A\mathbf{x}_0$을 사용하면 아래와 같이 유도할 수 있다.
+이제 1단계에서 사용했던 관계식인 $\mathbf{b}_1=\mathbf{b}_0+A\mathbf{x}_0$을 사용하면 아래와 같이 유도할 수 있다.
 
 $$
 \displaylines{
