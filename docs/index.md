@@ -238,3 +238,20 @@ $$
 $$
 \mathbf{x}=\mathbf{x}_0+X\mathbf{c}(X=\begin{pmatrix}\chi_1&\chi_2\end{pmatrix})
 $$
+
+#### 검산
+
+이제 위의 식을 실제 값으로 바꾸어 계산해보겠다.
+
+$$
+\displaylines{
+\begin{pmatrix}b_{13}\\b_{14}\end{pmatrix}=\Gamma\mathbf{c}=I\mathbf{c}\\
+\therefore\mathbf{c}=\begin{pmatrix}b_{13}\\b_{14}\end{pmatrix}\\
+X=\begin{pmatrix}\chi_1&\chi_2\end{pmatrix}=\begin{pmatrix}1&0\\0&1\\1&1\\1&1\end{pmatrix}\\
+\mathbf{x}=\mathbf{x}_0+X\mathbf{c}=\begin{pmatrix}0\\0\\b_{01}\\b_{02}\end{pmatrix}+\begin{pmatrix}b_{13}\\b_{14}\\b_{13}+b_{14}\\b_{13}+b_{14}\end{pmatrix}\\
+=\begin{pmatrix}0\\0\\b_{01}\\b_{02}\end{pmatrix}+\begin{pmatrix}b_{01}+b_{02}+b_{03}\\b_{01}+b_{02}+b_{04}\\b_{03}+b_{04}\\b_{03}+b_{04}\end{pmatrix}=\begin{pmatrix}b_{01}+b_{02}+b_{03}\\b_{01}+b_{02}+b_{04}\\b_{01}+b_{03}+b_{04}\\b_{02}+b_{03}+b_{04}\end{pmatrix}\\
+=\begin{pmatrix}1&1&1&0\\1&1&0&1\\1&0&1&1\\0&1&1&1\end{pmatrix}\mathbf{b}
+}
+$$
+
+실제로 $\mathbb{Z}_2$ 위에서의 $A$의 역행렬을 구해보면 $A^{-1}=A$이다. 따라서 $\mathbf{x}=A^{-1}\mathbf{b}=A\mathbf{b}$$이므로 위와 같이 구해도 원래와 같은 해를 구할 수 있음을 알 수 있다. 하지만 기존 방법과 다른 점이라면 4×4 크기의 행렬인 A의 역행렬을 구하지 않고 2×2 크기의 행렬인 $\Gamma$의 역행렬을 구해서 해를 구했다는 점이다.
