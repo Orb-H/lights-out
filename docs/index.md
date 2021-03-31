@@ -230,11 +230,11 @@ $$
 이를 조금 변형시켜서 쓰면 아래와 같이 된다.
 
 $$
-\begin{pmatrix}\mathbf{b}_{13}\\\mathbf{b}_{14}\end{pmatrix}=\begin{pmatrix}\gamma_1&\gamma_2\end{pmatrix}\begin{pmatrix}c_1\\c_2\end{pmatrix}=\Gamma\mathbb{c}
+\begin{pmatrix}\mathbf{b}_{13}\\\mathbf{b}_{14}\end{pmatrix}=\begin{pmatrix}\gamma_1&\gamma_2\end{pmatrix}\begin{pmatrix}c_1\\c_2\end{pmatrix}=\Gamma\mathbf{c}
 $$
 
 이를 만족하는 $\mathbf{c}$를 찾아서 아래의 식에 대입하면 해가 나온다.
 
 $$
-\mathbf{x}=\mathbf{x}_0+\Chi\mathbf{c}&(\Chi=\begin{pmatrix}\chi_1&\chi_2\end{pmatrix})
+\mathbf{x}=\mathbf{x}_0+\Chi\mathbf{c}(\Chi=\begin{pmatrix}\chi_1&\chi_2\end{pmatrix})
 $$
