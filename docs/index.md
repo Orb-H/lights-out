@@ -224,17 +224,17 @@ $$
 위의 식에서 구하지 않은 상태로 남아있는 것은 이제 $c_1$과 $c_2$뿐이다. 이 상수는 새로운 행렬 방정식 하나를 풀면 구할 수 있다. 그 전에 새로운 변수 $\gamma_i$를 선언한다. $\gamma_i$는 $\beta_i$의 아래부터 2개의 원소를 원소로 가지는 벡터이다. 그러면 $\gamma_i$는 아래와 같은 관계를 만족한다.
 
 $$
-\begin{pmatrix}\mathbf{b}_{13}\\\mathbf{b}_{14}\end{pmatrix}=c_1\gamma_1+c_2\gamma_2
+\begin{pmatrix}b_{13}\\b_{14}\end{pmatrix}=c_1\gamma_1+c_2\gamma_2
 $$
 
 이를 조금 변형시켜서 쓰면 아래와 같이 된다.
 
 $$
-\begin{pmatrix}\mathbf{b}_{13}\\\mathbf{b}_{14}\end{pmatrix}=\begin{pmatrix}\gamma_1&\gamma_2\end{pmatrix}\begin{pmatrix}c_1\\c_2\end{pmatrix}=\Gamma\mathbf{c}
+\begin{pmatrix}b_{13}\\\b_{14}\end{pmatrix}=\begin{pmatrix}\gamma_1&\gamma_2\end{pmatrix}\begin{pmatrix}c_1\\c_2\end{pmatrix}=\Gamma\mathbf{c}
 $$
 
 이를 만족하는 $\mathbf{c}$를 찾아서 아래의 식에 대입하면 해가 나온다.
 
 $$
-\mathbf{x}=\mathbf{x}_0+\Chi\mathbf{c}(\Chi=\begin{pmatrix}\chi_1&\chi_2\end{pmatrix})
+\mathbf{x}=\mathbf{x}_0+X\mathbf{c}(X=\begin{pmatrix}\chi_1&\chi_2\end{pmatrix})
 $$
