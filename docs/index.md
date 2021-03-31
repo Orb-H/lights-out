@@ -196,8 +196,8 @@ $$
 
 $$
 \displaylines{
-\mathbb{b}_1+c_1\beta_1+c_2\beta_2=0\\
-\mathbb{b}_1=c_1\beta_1+c_2\beta_2
+\mathbf{b}_1+c_1\beta_1+c_2\beta_2=0\\
+\mathbf{b}_1=c_1\beta_1+c_2\beta_2
 }
 $$
 
@@ -205,36 +205,36 @@ $$
 
 $$
 \displaylines{
-\mathbb{b}_1=c_1\beta_1+c_2\beta_2\\
-\mathbb{b}_1=A\mathbb{x}_1\\
+\mathbf{b}_1=c_1\beta_1+c_2\beta_2\\
+\mathbf{b}_1=A\mathbf{x}_1\\
 c_1\beta_1+c_2\beta_2=c_1A\chi_1+c_2A\chi_2\\
-\therefore\mathbb{x}_1=c_1\chi_1+c_2\chi_2
+\therefore\mathbf{x}_1=c_1\chi_1+c_2\chi_2
 }
 $$
 
-이제 1단계에서 사용헀던 관계식인 $\mathbb{b}_1=\mathbb{b}_0+A\mathbb{x}_0$을 사용하면 아래와 같이 유도할 수 있다.
+이제 1단계에서 사용헀던 관계식인 $\mathbf{b}_1=\mathbf{b}_0+A\mathbf{x}_0$을 사용하면 아래와 같이 유도할 수 있다.
 
 $$
 \displaylines{
-A\mathbb{x}=\mathbb{b}_0=\mathbb{b}_1+A\mathbb{x}_0=A\mathbb{x}_0+c_1A\chi_1+c_2A\chi_2\\
-\mathbb{x}=\mathbb{x}_0+c_1\chi_1+c_2\chi_2
+A\mathbf{x}=\mathbf{b}_0=\mathbf{b}_1+A\mathbf{x}_0=A\mathbf{x}_0+c_1A\chi_1+c_2A\chi_2\\
+\mathbf{x}=\mathbf{x}_0+c_1\chi_1+c_2\chi_2
 }
 $$
 
 위의 식에서 구하지 않은 상태로 남아있는 것은 이제 $c_1$과 $c_2$뿐이다. 이 상수는 새로운 행렬 방정식 하나를 풀면 구할 수 있다. 그 전에 새로운 변수 $\gamma_i$를 선언한다. $\gamma_i$는 $\beta_i$의 아래부터 2개의 원소를 원소로 가지는 벡터이다. 그러면 $\gamma_i$는 아래와 같은 관계를 만족한다.
 
 $$
-\begin{pmatrix}\mathbb{b}_{13}\\\mathbb{b}_{14}\end{pmatrix}=c_1\gamma_1+c_2\gamma_2
+\begin{pmatrix}\mathbf{b}_{13}\\\mathbf{b}_{14}\end{pmatrix}=c_1\gamma_1+c_2\gamma_2
 $$
 
 이를 조금 변형시켜서 쓰면 아래와 같이 된다.
 
 $$
-\begin{pmatrix}\mathbb{b}_{13}\\\mathbb{b}_{14}\end{pmatrix}=\begin{pmatrix}\gamma_1&\gamma_2\end{pmatrix}\begin{pmatrix}c_1\\c_2\end{pmatrix}=\Gamma\mathbb{c}
+\begin{pmatrix}\mathbf{b}_{13}\\\mathbf{b}_{14}\end{pmatrix}=\begin{pmatrix}\gamma_1&\gamma_2\end{pmatrix}\begin{pmatrix}c_1\\c_2\end{pmatrix}=\Gamma\mathbb{c}
 $$
 
-이를 만족하는 $\mathbb{c}$를 찾아서 아래의 식에 대입하면 해가 나온다.
+이를 만족하는 $\mathbf{c}$를 찾아서 아래의 식에 대입하면 해가 나온다.
 
 $$
-\mathbb{x}=\mathbb{x}_0+\Chi\mathbb{c}&(\Chi=\begin{pmatrix}\chi_1&\chi_2\end{pmatrix})
+\mathbf{x}=\mathbf{x}_0+\Chi\mathbf{c}&(\Chi=\begin{pmatrix}\chi_1&\chi_2\end{pmatrix})
 $$
