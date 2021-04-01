@@ -350,7 +350,7 @@ $$
 \displaylines{
 \mathbf{b}_2=\mathbf{b}_1+A\mathbf{x}_2\\
 \mathbf{x}_2=\begin{pmatrix}0&0&0\\0&0&0\\b_{14}&b_{15}&b_{16}\end{pmatrix}\\
-\mathbf{b}_2=\begin{pmatrix}0\\0\\0\\0\\0\\0\\b_{14}+b_{15}+b_{17}\\b_{14}+b_{15}+b_{16}+b_{18}\\b_{15}+b_{16}+b_{19}\end{pmatrix}
+\mathbf{b}_2=\begin{pmatrix}0\\0\\0\\0\\0\\0\\b_{14}+b_{15}+b_{17}\\b_{14}+b_{15}+b_{16}+b_{18}\\b_{15}+b_{16}+b_{19}\end{pmatrix}=\begin{pmatrix}0\\0\\0\\0\\0\\0\\b_{01}+b_{03}+b_{04}+b_{05}+b_{07}\\b_{04}+b_{05}+b_{06}+b_{08}\\b_{01}+b_{03}+b_{05}+b_{06}+b_{09}\end{pmatrix}
 }
 $$
 
