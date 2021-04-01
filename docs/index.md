@@ -301,6 +301,7 @@ $$
 A\mathbf{x}=AX\mathbf{c}+A\mathbf{x}_1\\
 \mathbf{x}=X\mathbf{c}+\mathbf{x}_1\\
 X\mathbf{c}=X\beta_f=\begin{pmatrix}1&0\\0&1\\1&1\\1&1\end{pmatrix}\begin{pmatrix}b_{01}+b_{02}+b_{03}\\b_{01}+b_{02}+b_{04}\end{pmatrix}=\begin{pmatrix}b_{01}+b_{02}+b_{03}\\b_{01}+b_{02}+b_{04}\\b_{03}+b_{04}\\b_{03}+b_{04}\end{pmatrix}\\
-\mathbf{x}=\begin{pmatrix}b_{01}+b_{02}+b_{03}\\b_{01}+b_{02}+b_{04}\\b_{03}+b_{04}\\b_{03}+b_{04}\end{pmatrix}+\begin{pmatrix}0\\0\\b_{01}\\b_{02}\end{pmatrix}=\begin{pmatrix}b_{01}+b_{02}+b_{03}\\b_{01}+b_{02}+b_{04}\\b_{01}+b_{03}+b_{04}\\b_{02}+b_{03}+b_{04}\end{pmatrix}=\begin{pmatrix}1&1&1&0\\1&1&0&1\\1&0&1&1\\0&1&1&1\end{pmatrix}\begin{pmatrix}b_{01}\\b_{02}\\b_{03}\\b_{04}\end{pmatrix}=A\mathbf{b}_0=A\mathbf{b}
+\mathbf{x}=\begin{pmatrix}b_{01}+b_{02}+b_{03}\\b_{01}+b_{02}+b_{04}\\b_{03}+b_{04}\\b_{03}+b_{04}\end{pmatrix}+\begin{pmatrix}0\\0\\b_{01}\\b_{02}\end{pmatrix}=\begin{pmatrix}b_{01}+b_{02}+b_{03}\\b_{01}+b_{02}+b_{04}\\b_{01}+b_{03}+b_{04}\\b_{02}+b_{03}+b_{04}\end{pmatrix}\\
+=\begin{pmatrix}1&1&1&0\\1&1&0&1\\1&0&1&1\\0&1&1&1\end{pmatrix}\begin{pmatrix}b_{01}\\b_{02}\\b_{03}\\b_{04}\end{pmatrix}=A\mathbf{b}_0=A\mathbf{b}
 }
 $$
