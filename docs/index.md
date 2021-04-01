@@ -245,7 +245,7 @@ $$
 
 $$
 \displaylines{
-B=\begin{pmatrix}\beta_1&\beta_2\end{pmatrix}=begin{pmatrix}1&0\\0&1\end{pmatrix}\\
+B=\begin{pmatrix}\beta_1&\beta_2\end{pmatrix}=\begin{pmatrix}1&0\\0&1\end{pmatrix}\\
 \begin{pmatrix}b_{13}\\b_{14}\end{pmatrix}=B\mathbf{c}=I\mathbf{c}\\
 \therefore\mathbf{c}=\begin{pmatrix}b_{13}\\b_{14}\end{pmatrix}\\
 X=\begin{pmatrix}\chi_1&\chi_2\end{pmatrix}=\begin{pmatrix}1&0\\0&1\\1&1\\1&1\end{pmatrix}\\
