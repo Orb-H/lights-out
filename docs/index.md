@@ -339,7 +339,8 @@ $$
 \displaylines{
 \mathbf{b}_0=\mathbf{b}\\
 \mathbf{b}_1=\mathbf{b}_0+A\mathbf{x}_1\\
-\begin{pmatrix}b_{11}\\b_{12}\\b_{13}\\b_{14}\\b_{15}\\b_{16}\\b_{17}\\b_{18}\\b_{19}\end{pmatrix}=\begin{pmatrix}b_{01}\\b_{02}\\b_{03}\\b_{04}\\b_{05}\\b_{06}\\b_{07}\\b_{08}\\b_{09}\end{pmatrix}+\begin{pmatrix}Z_3&I_3&O_3\\I_3&Z_3&I_3\\O_3&I_3&Z_3\end{pmatrix}\begin{pmatrix}0\\0\\0\\b_{01}\\b_{02}\\b_{03}\\0\\0\\0\end{pmatrix}=\begin{pmatrix}b_{01}+b_{01}\\b_{02}+b_{02}\\b_{03}+b_{03}\\b_{04}+b_{01}+b_{02}\\b_{05}+b_{01}+b_{02}+b_{03}\\b_{06}+b_{02}+b_{03}\\b_{07}+b_{01}\\b_{08}+b_{02}\\b_{09}+b_{03}\end{pmatrix}=\begin{pmatrix}0\\0\\0\\b_{04}+b_{01}+b_{02}\\b_{05}+b_{01}+b_{02}+b_{03}\\b_{06}+b_{02}+b_{03}\\b_{07}+b_{01}\\b_{08}+b_{02}\\b_{09}+b_{03}\end{pmatrix}\\
+\begin{pmatrix}b_{11}\\b_{12}\\b_{13}\\b_{14}\\b_{15}\\b_{16}\\b_{17}\\b_{18}\\b_{19}\end{pmatrix}=\begin{pmatrix}b_{01}\\b_{02}\\b_{03}\\b_{04}\\b_{05}\\b_{06}\\b_{07}\\b_{08}\\b_{09}\end{pmatrix}+\begin{pmatrix}Z_3&I_3&O_3\\I_3&Z_3&I_3\\O_3&I_3&Z_3\end{pmatrix}\begin{pmatrix}0\\0\\0\\b_{01}\\b_{02}\\b_{03}\\0\\0\\0\end{pmatrix}\\
+=\begin{pmatrix}b_{01}+b_{01}\\b_{02}+b_{02}\\b_{03}+b_{03}\\b_{04}+b_{01}+b_{02}\\b_{05}+b_{01}+b_{02}+b_{03}\\b_{06}+b_{02}+b_{03}\\b_{07}+b_{01}\\b_{08}+b_{02}\\b_{09}+b_{03}\end{pmatrix}=\begin{pmatrix}0\\0\\0\\b_{04}+b_{01}+b_{02}\\b_{05}+b_{01}+b_{02}+b_{03}\\b_{06}+b_{02}+b_{03}\\b_{07}+b_{01}\\b_{08}+b_{02}\\b_{09}+b_{03}\end{pmatrix}\\
 Z_3=\begin{pmatrix}1&1&0\\1&1&1\\0&1&1\end{pmatrix},I_3=\begin{pmatrix}1&0&0\\0&1&0\\0&0&1\end{pmatrix},O_3=\begin{pmatrix}0&0&0\\0&0&0\\0&0&0\end{pmatrix}
 }
 $$
@@ -366,9 +367,11 @@ $$
 
 $$
 \displaylines{
-\mathbf{b}_{1,0}=A\begin{pmatrix}1&0&0&0&0&0&0&0&0\end{pmatrix}^T=\begin{pmatrix}1&1&0&1&0&0&0&0&0\end{pmatrix}^T\\
+\mathbf{b}_{1,0}=A\begin{pmatrix}1&0&0&0&0&0&0&0&0\end{pmatrix}^T\\
+=\begin{pmatrix}1&1&0&1&0&0&0&0&0\end{pmatrix}^T\\
 \mathbf{b}_{1,1}=\mathbf{b}_{1,0}+A\mathbf{x}_{1,1}=\begin{pmatrix}1\\1\\0\\1\\0\\0\\0\\0\\0\end{pmatrix}+\begin{pmatrix}Z_3&I_3&O_3\\I_3&Z_3&I_3\\O_3&I_3&Z_3\end{pmatrix}\begin{pmatrix}0\\0\\0\\1\\1\\0\\0\\0\\0\end{pmatrix}=\begin{pmatrix}0\\0\\0\\1\\0\\1\\1\\1\\0\end{pmatrix}\\
-\mathbf{b}_{1,2}=\mathbf{b}_{1,1}+A\mathbf{x}_{1,2}=\mathbf{b}_{1,1}+A\begin{pmatrix}0&0&0&0&0&0&1&0&1\end{pmatrix}^T=\begin{pmatrix}0&0&0&0&0&0&0&1&1\end{pmatrix}^T
+\mathbf{b}_{1,2}=\mathbf{b}_{1,1}+A\mathbf{x}_{1,2}=\mathbf{b}_{1,1}+A\begin{pmatrix}0&0&0&0&0&0&1&0&1\end{pmatrix}^T\\
+=\begin{pmatrix}0&0&0&0&0&0&0&1&1\end{pmatrix}^T
 }
 $$
 
@@ -376,7 +379,8 @@ $$
 
 $$
 \displaylines{
-\chi_1=\begin{pmatrix}1&0&0&0&0&0&0&0&0\end{pmatrix}^T+\mathbf{x}_1+\mathbf{x}_2=\begin{pmatrix}1&0&0&1&1&0&1&0&1\end{pmatrix}^T\\
+\chi_1=\begin{pmatrix}1&0&0&0&0&0&0&0&0\end{pmatrix}^T+\mathbf{x}_1+\mathbf{x}_2\\
+=\begin{pmatrix}1&0&0&1&1&0&1&0&1\end{pmatrix}^T\\
 \mathbf{b}_{1,f}=\mathbf{b}_{1,2}=\begin{pmatrix}0&0&0&0&0&0&0&1&1\end{pmatrix}^T
 }
 $$
@@ -385,7 +389,7 @@ $$
 
 $$
 \displaylines{
-\mathbf{b}_{2,f}=\mathbf{b}_{2,2}=\begin{pmatrix}0&0&0&0&0&0&1&1&1\end{pmatrix}^T
+\mathbf{b}_{2,f}=\mathbf{b}_{2,2}=\begin{pmatrix}0&0&0&0&0&0&1&1&1\end{pmatrix}^T\\
 \chi_2=\begin{pmatrix}0&0&0&1&1&1&0&0&0\end{pmatrix}^T\\
 \mathbf{b}_{3,f}=\text{x-flip}(\mathbf{b}_{1,f})=\begin{pmatrix}0&0&0&0&0&0&1&1&0\end{pmatrix}^T\\
 \chi_3=\text{x-flip}(\chi_1)=\begin{pmatrix}0&0&1&0&1&1&1&0&1\end{pmatrix}
