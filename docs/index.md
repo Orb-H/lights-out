@@ -286,7 +286,7 @@ $$
 \mathbf{b}_{2,f}=\mathbf{b}_{2,1}=\begin{pmatrix}0&0&0&1\end{pmatrix}^T\\
 \beta_2=\begin{pmatrix}b_{2,f3}&b_{2,f4}\end{pmatrix}^T=\begin{pmatrix}0&1\end{pmatrix}^T\\
 \chi_2=\begin{pmatrix}0&1&1&1\end{pmatrix}^T\\
-\Beta=\begin{pmatrix}\beta_1&\beta_2\end{pmatrix}\\
+B=\begin{pmatrix}\beta_1&\beta_2\end{pmatrix}\\
 X=\begin{pmatrix}\chi_1&\chi_2\end{pmatrix}
 }
 $$
@@ -294,9 +294,11 @@ $$
 최종해 구하기
 
 $$
-\beta_f=\begin{pmatrix}b_{f3}&b_{f4}\end{pmatrix}^T=\Beta\mathbf{c}=\mathbf{c}\\
+\displaylines{
+\beta_f=\begin{pmatrix}b_{f3}&b_{f4}\end{pmatrix}^T=B\mathbf{c}=\mathbf{c}\\
 \mathbf{b}=\mathbf{b}_1+A\mathbf{x}_1\\
 A\mathbf{x}=AX\mathbf{c}+A\mathbf{x}_1\\
 \mathbf{x}=X\mathbf{c}+\mathbf{x}_1\\
 X\mathbf{c}=X\beta_f=\begin{pmatrix}1&0\\0&1\\1&1\\1&1\end{pmatrix}\begin{pmatrix}b_{01}+b_{02}+b_{03}&b_{01}+b_{02}+b_{04}\end{pmatrix}^T
+}
 $$
