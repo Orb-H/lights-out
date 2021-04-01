@@ -392,7 +392,7 @@ $$
 \mathbf{b}_{2,f}=\mathbf{b}_{2,2}=\begin{pmatrix}0&0&0&0&0&0&1&1&1\end{pmatrix}^T\\
 \chi_2=\begin{pmatrix}0&0&0&1&1&1&0&0&0\end{pmatrix}^T\\
 \mathbf{b}_{3,f}=\text{x-flip}(\mathbf{b}_{1,f})=\begin{pmatrix}0&0&0&0&0&0&1&1&0\end{pmatrix}^T\\
-\chi_3=\text{x-flip}(\chi_1)=\begin{pmatrix}0&0&1&0&1&1&1&0&1\end{pmatrix}
+\chi_3=\text{x-flip}(\chi_1)=\begin{pmatrix}0&0&1&0&1&1&1&0&1\end{pmatrix}^T
 }
 $$
 
