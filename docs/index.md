@@ -155,49 +155,49 @@ $$
 
 #### Light Chasing 2단계(가장 윗줄 토글해서 아랫줄 지우기)를 행렬로 옮기기
 
-가장 윗줄의 스위치($x_1$, $x_2$)를 적당히 토글한 후 1단계와 같은 방법을 다시 사용하면 가장 아랫줄의 켜진 전구도 모두 끌 수 있다. 어떤 것은 누르고 어떤 것은 누르지 않을지는 다음 식을 통해 구한다.
+가장 윗줄의 스위치($x_1$, $x_2$)를 적당히 토글한 후 1단계와 같은 방법을 다시 사용하면 가장 아랫줄의 켜진 전구도 모두 끌 수 있다. 어떤 것은 누르고 어떤 것은 누르지 않을지는 다음 식을 통해 구한다. 이제 가장 윗줄의 스위치 중 가장 왼쪽의 것($x_1$)을 토글하고 1단계 방법을 다시 적용하는 과정을 나타내보겠다.
 
 $$
 \displaylines{
-\mathbf{b}_0=A\begin{pmatrix}1&0&0&0\end{pmatrix}^T=\begin{pmatrix}1&1&1&0\end{pmatrix}^T\\
-\mathbf{b}_1=\mathbf{b}_0+A\mathbf{x}_1=\begin{pmatrix}1\\1\\1\\0\end{pmatrix}+\begin{pmatrix}Z&I\\I&Z\end{pmatrix}\begin{pmatrix}0\\0\\1\\1\end{pmatrix}=\begin{pmatrix}0\\0\\1\\0\end{pmatrix}
+\mathbf{b}_{1,0}=A\begin{pmatrix}1&0&0&0\end{pmatrix}^T=\begin{pmatrix}1&1&1&0\end{pmatrix}^T\\
+\mathbf{b}_{1,1}=\mathbf{b}_{1,0}+A\mathbf{x}_{1,1}=\begin{pmatrix}1\\1\\1\\0\end{pmatrix}+\begin{pmatrix}Z&I\\I&Z\end{pmatrix}\begin{pmatrix}0\\0\\1\\1\end{pmatrix}=\begin{pmatrix}0\\0\\1\\0\end{pmatrix}
 }
 $$
 
-왼쪽 위의 스위치($x_1$)를 토글하고 1단계 방법을 통해서 다시 아랫줄의 전구만 남기는 과정을 계산해보았더니 위와 같이 되었다. 이 때 누른 모든 스위치를 $\chi_1$, 남는 보드를 $\beta_1$라고 써보면 아래와 같은 식을 만족한다.
+이 때 누른 모든 스위치를 $\chi_1$, 남는 보드를 $\mathbf{b}_{1,f}$라고 써보면 아래와 같은 식을 만족한다.
 
 $$
 \displaylines{
 \chi_1=\begin{pmatrix}1&0&0&0\end{pmatrix}^T+\mathbf{x}_1=\begin{pmatrix}1&0&1&1\end{pmatrix}^T\\
-\beta_1=\mathbf{b}_1=\begin{pmatrix}0&0&1&0\end{pmatrix}^T
+\mathbf{b}_{1,f}=\mathbf{b}_{1,1}=\begin{pmatrix}0&0&1&0\end{pmatrix}^T
 }
 $$
 
-마찬가지의 방법으로 $\chi_2$와 $\beta_2$를 구해보면 아래와 같다.
+마찬가지의 방법으로 $\chi_2$와 $\mathbf{b}_{2,f}$를 구해보면 아래와 같다.
 
 $$
 \displaylines{
 \chi_2=\begin{pmatrix}0&1&1&1\end{pmatrix}^T\\
-\beta_2=\begin{pmatrix}0&0&0&1\end{pmatrix}^T
+\mathbf{b}_{2,f}=\mathbf{b}_{2,1}=\begin{pmatrix}0&0&0&1\end{pmatrix}^T
 }
 $$
 
-그리고 $\beta_i$와 $\chi_i$는 아래와 같은 관계를 만족한다.
+그리고 $\mathbf{b}_{i,f}$와 $\chi_i$는 아래와 같은 관계를 만족한다.
 
 $$
-\beta_i=A\chi_i
+\mathbf{b}_{i,f}=A\chi_i
 $$
 
-이제 구한 $\beta_i$와 $\chi_i$를 사용하여 최종 해를 구하는 과정을 기술해보겠다.
+이제 구한 $\mathbf{b}_{i,f}$와 $\chi_i$를 사용하여 최종 해를 구하는 과정을 기술해보겠다.
 
 #### Light Chasing 3단계(최종해 구하기)를 행렬로 옮기기
 
-1단계를 진행한 후 남은 보드에는 가장 아랫줄만 남아있다. 이제 여기에 $\beta_i$를 적당히 더하면 보드의 전구가 모두 꺼지는 경우가 있을 것이다. 식으로 나타내면 아래와 같다.
+1단계를 진행한 후 남은 보드에는 가장 아랫줄만 남아있다. 이제 여기에 $\mathbf{b}_{i,f}$를 적당히 더하면 보드의 전구가 모두 꺼지는 경우가 있을 것이다. 식으로 나타내면 아래와 같다.
 
 $$
 \displaylines{
-\mathbf{b}_1+c_1\beta_1+c_2\beta_2=0\\
-\mathbf{b}_1=c_1\beta_1+c_2\beta_2
+\mathbf{b}_f+c_1\mathbf{b}_{1,f}+c_2\mathbf{b}_{2,f}=0\\
+\mathbf{b}_f=c_1\mathbf{b}_{1,f}+c_2\mathbf{b}_{2,f}
 }
 $$
 
@@ -205,38 +205,38 @@ $$
 
 $$
 \displaylines{
-\mathbf{b}_1=c_1\beta_1+c_2\beta_2\\
-\mathbf{b}_1=A\mathbf{x}_1\\
-c_1\beta_1+c_2\beta_2=c_1A\chi_1+c_2A\chi_2\\
-\therefore\mathbf{x}_1=c_1\chi_1+c_2\chi_2
+\mathbf{b}_f=c_1\mathbf{b}_{1,f}+c_2\mathbf{b}_{2,f}\\
+\mathbf{b}_f=A\mathbf{x}_f\\
+c_1\mathbf{b}_{1,f}+c_2\mathbf{b}_{2,f}=c_1A\chi_1+c_2A\chi_2\\
+\therefore\mathbf{x}_f=c_1\chi_1+c_2\chi_2
 }
 $$
 
-이제 1단계에서 사용했던 관계식인 $\mathbf{b}_1=\mathbf{b}_0+A\mathbf{x}_0$을 사용하면 아래와 같이 유도할 수 있다.
+이제 1단계에서 사용했던 관계식인 $\mathbf{b}_1=\mathbf{b}_0+A\mathbf{x}_1$을 사용하면 아래와 같이 유도할 수 있다.
 
 $$
 \displaylines{
-A\mathbf{x}=\mathbf{b}_0=\mathbf{b}_1+A\mathbf{x}_0=A\mathbf{x}_0+c_1A\chi_1+c_2A\chi_2\\
-\mathbf{x}=\mathbf{x}_0+c_1\chi_1+c_2\chi_2
+A\mathbf{x}=\mathbf{b}_0=\mathbf{b}_1+A\mathbf{x}_1=A\mathbf{x}_1+c_1A\chi_1+c_2A\chi_2\\
+\mathbf{x}=\mathbf{x}_1+c_1\chi_1+c_2\chi_2
 }
 $$
 
-위의 식에서 구하지 않은 상태로 남아있는 것은 이제 $c_1$과 $c_2$뿐이다. 이 상수는 새로운 행렬 방정식 하나를 풀면 구할 수 있다. 그 전에 새로운 변수 $\gamma_i$를 선언한다. $\gamma_i$는 $\beta_i$의 아래부터 2개의 원소를 원소로 가지는 벡터이다. 그러면 $\gamma_i$는 아래와 같은 관계를 만족한다.
+위의 식에서 구하지 않은 상태로 남아있는 것은 이제 $c_1$과 $c_2$뿐이다. 이 상수는 새로운 행렬 방정식 하나를 풀면 구할 수 있다. 그 전에 새로운 변수 $\beta_i$를 선언한다. $\beta_i$는 $\mathbf{b}_{i,f}$의 아래부터 2개의 원소를 원소로 가지는 벡터이다. 그러면 $\beta_i$는 아래와 같은 관계를 만족한다.
 
 $$
-\begin{pmatrix}b_{13}\\b_{14}\end{pmatrix}=c_1\gamma_1+c_2\gamma_2
+\begin{pmatrix}b_{13}\\b_{14}\end{pmatrix}=c_1\beta_1+c_2\beta_2
 $$
 
 이를 조금 변형시켜서 쓰면 아래와 같이 된다.
 
 $$
-\begin{pmatrix}b_{13}\\b_{14}\end{pmatrix}=\begin{pmatrix}\gamma_1&\gamma_2\end{pmatrix}\begin{pmatrix}c_1\\c_2\end{pmatrix}=\Gamma\mathbf{c}
+\begin{pmatrix}b_{13}\\b_{14}\end{pmatrix}=\begin{pmatrix}\beta_1&\beta_2\end{pmatrix}\begin{pmatrix}c_1\\c_2\end{pmatrix}=B\mathbf{c}
 $$
 
 이를 만족하는 $\mathbf{c}$를 찾아서 아래의 식에 대입하면 해가 나온다.
 
 $$
-\mathbf{x}=\mathbf{x}_0+X\mathbf{c}(X=\begin{pmatrix}\chi_1&\chi_2\end{pmatrix})
+\mathbf{x}=\mathbf{x}_1+X\mathbf{c}(X=\begin{pmatrix}\chi_1&\chi_2\end{pmatrix})
 $$
 
 #### 검산
@@ -245,7 +245,8 @@ $$
 
 $$
 \displaylines{
-\begin{pmatrix}b_{13}\\b_{14}\end{pmatrix}=\Gamma\mathbf{c}=I\mathbf{c}\\
+B=\begin{pmatrix}\beta_1&\beta_2\end{pmatrix}=begin{pmatrix}1&0\\0&1\end{pmatrix}\\
+\begin{pmatrix}b_{13}\\b_{14}\end{pmatrix}=B\mathbf{c}=I\mathbf{c}\\
 \therefore\mathbf{c}=\begin{pmatrix}b_{13}\\b_{14}\end{pmatrix}\\
 X=\begin{pmatrix}\chi_1&\chi_2\end{pmatrix}=\begin{pmatrix}1&0\\0&1\\1&1\\1&1\end{pmatrix}\\
 \mathbf{x}=\mathbf{x}_0+X\mathbf{c}=\begin{pmatrix}0\\0\\b_{01}\\b_{02}\end{pmatrix}+\begin{pmatrix}b_{13}\\b_{14}\\b_{13}+b_{14}\\b_{13}+b_{14}\end{pmatrix}\\
@@ -254,7 +255,7 @@ X=\begin{pmatrix}\chi_1&\chi_2\end{pmatrix}=\begin{pmatrix}1&0\\0&1\\1&1\\1&1\en
 }
 $$
 
-실제로 $\mathbb{Z}_2$ 위에서의 $A$의 역행렬을 구해보면 $A^{-1}=A$이다. 따라서 $\mathbf{x}=A^{-1}\mathbf{b}=A\mathbf{b}$이므로 위와 같이 구해도 원래와 같은 해를 구할 수 있음을 알 수 있다. 하지만 기존 방법과 다른 점이라면 4×4 크기의 행렬인 A가 포함된 방정식을 풀지 않고 2×2 크기의 행렬인 $\Gamma$가 포함된 방정식을 풀어서 해를 구했다는 점이다.
+실제로 $\mathbb{Z}_2$ 위에서의 $A$의 역행렬을 구해보면 $A^{-1}=A$이다. 따라서 $\mathbf{x}=A^{-1}\mathbf{b}=A\mathbf{b}$이므로 위와 같이 구해도 원래와 같은 해를 구할 수 있음을 알 수 있다. 하지만 기존 방법과 다른 점이라면 4×4 크기의 행렬인 A가 포함된 방정식을 풀지 않고 2×2 크기의 행렬인 $B$가 포함된 방정식을 풀어서 해를 구했다는 점이다.
 
 #### 요약
 
