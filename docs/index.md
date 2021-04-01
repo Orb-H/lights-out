@@ -306,3 +306,56 @@ X\mathbf{c}=X\beta_f=\begin{pmatrix}1&0\\0&1\\1&1\\1&1\end{pmatrix}\begin{pmatri
 =\begin{pmatrix}1&1&1&0\\1&1&0&1\\1&0&1&1\\0&1&1&1\end{pmatrix}\begin{pmatrix}b_{01}\\b_{02}\\b_{03}\\b_{04}\end{pmatrix}=A\mathbf{b}_0=A\mathbf{b}
 }
 $$
+
+### 3. 3x3 보드
+
+*역시 여기서도 모든 변수는 $\mathbb{Z}_2$에 속한다*
+
+#### 1) 1단계
+
+변수의 index는 아래와 같이 나타낸다.
+
+<table>
+<tr>
+<td>$b_1$, $x_1$</td>
+<td>$b_2$, $x_2$</td>
+<td>$b_3$, $x_3$</td>
+</tr>
+<tr>
+<td>$b_4$, $x_4$</td>
+<td>$b_5$, $x_5$</td>
+<td>$b_6$, $x_6$</td>
+</tr>
+<tr>
+<td>$b_7$, $x_7$</td>
+<td>$b_8$, $x_8$</td>
+<td>$b_9$, $x_9$</td>
+</tr>
+</table>
+
+이제 Light Chasing 방법을 사용한다. 가장 윗줄($b_1$, $b_2$, $b_3$)에 불이 켜져있다면 각각에 대해 $x_4$, $x_5$, $x_6$를 토글한다. 그 과정을 나타내보면 아래와 같이 된다.
+
+$$
+\displaylines{
+\mathbf{b}_0=\mathbf{b}\\
+\mathbf{b}_1=\mathbf{b}_0+A\mathbf{x}_1\\
+\begin{pmatrix}b_{11}\\b_{12}\\b_{13}\\b_{14}\\b_{15}\\b_{16}\\b_{17}\\b_{18}\\b_{19}\end{pmatrix}=\begin{pmatrix}b_{01}\\b_{02}\\b_{03}\\b_{04}\\b_{05}\\b_{06}\\b_{07}\\b_{08}\\b_{09}\end{pmatrix}+\begin{pmatrix}Z_3&I_3&O_3\\I_3&Z_3&I_3\\O_3&I_3&Z_3\end{pmatrix}\begin{pmatrix}0\\0\\0\\b_{01}\\b_{02}\\b_{03}\\0\\0\\0\end{pmatrix}=\begin{pmatrix}b_{01}+b_{01}\\b_{02}+b_{02}\\b_{03}+b_{03}\\b_{04}+b_{01}+b_{02}\\b_{05}+b_{01}+b_{02}+b_{03}\\b_{06}+b_{02}+b_{03}\\b_{07}+b_{01}\\b_{08}+b_{02}\\b_{09}+b_{03}\end{pmatrix}=\begin{pmatrix}0\\0\\0\\b_{04}+b_{01}+b_{02}\\b_{05}+b_{01}+b_{02}+b_{03}\\b_{06}+b_{02}+b_{03}\\b_{07}+b_{01}\\b_{08}+b_{02}\\b_{09}+b_{03}\end{pmatrix}\\
+Z_3=\begin{pmatrix}1&1&0\\1&1&1\\0&1&1\end{pmatrix},I_3=\begin{pmatrix}1&0&0\\0&1&0\\0&0&1\end{pmatrix},O_3=\begin{pmatrix}0&0&0\\0&0&0\\0&0&0\end{pmatrix}
+}
+$$
+
+이 과정을 통해 보드의 가장 윗줄을 지우고 아래 두 개의 줄만 켜진 전구가 남게 되었다. 이제 두 번째 줄에 대해 Light Chasing을 한 번 더 진행해야 한다.
+
+$$
+\displaylines{
+\mathbf{b}_2=\mathbf{b}_1+A\mathbf{x}_2\\
+\mathbf{x}_2=\begin{pmatrix}0&0&0\\0&0&0\\b_{14}&b_{15}&b_{16}\end{pmatrix}\\
+\mathbf{b}_2=\begin{pmatrix}0\\0\\0\\0\\0\\0\\b_{14}+b_{15}+b_{17}\\b_{14}+b_{15}+b_{16}+b_{18}\\b_{15}+b_{16}+b_{19}\end{pmatrix}
+}
+$$
+
+즉, 1단계를 진행한 결과는 다음과 같다.
+
+$$
+\mathbf{b}_f=\mathbf{b}_2=\mathbf{b}_1+A\mathbf{x}_2=\mathbf{b}_0+A\mathbf{x}_1+A\mathbf{x}_2=\mathbf{b}+A(\mathbf{x}_1+\mathbf{x}_2)
+$$
