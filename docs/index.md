@@ -255,3 +255,48 @@ X=\begin{pmatrix}\chi_1&\chi_2\end{pmatrix}=\begin{pmatrix}1&0\\0&1\\1&1\\1&1\en
 $$
 
 실제로 $\mathbb{Z}_2$ 위에서의 $A$의 역행렬을 구해보면 $A^{-1}=A$이다. 따라서 $\mathbf{x}=A^{-1}\mathbf{b}=A\mathbf{b}$이므로 위와 같이 구해도 원래와 같은 해를 구할 수 있음을 알 수 있다. 하지만 기존 방법과 다른 점이라면 4×4 크기의 행렬인 A가 포함된 방정식을 풀지 않고 2×2 크기의 행렬인 $\Gamma$가 포함된 방정식을 풀어서 해를 구했다는 점이다.
+
+#### 요약
+
+과정을 다시 정리해보면 아래와 같이 된다.
+
+초기 상태
+
+$\mathbf{b}_0=\mathbf{b}$
+
+가장 아랫줄만 남은 상태
+
+$$
+\displaylines{
+\mathbf{b}_f=\mathbf{b}_1=\mathbf{b}_0+A\mathbf{x}_1\\
+\mathbf{x}_1=\begin{pmatrix}0&0&b_{01}&b_{02}\end{pmatrix}^T\\
+\mathbf{b}_f=\mathbf{b}_0+A\begin{pmatrix}0&0&b_{01}&b_{02}\end{pmatrix}^T\\
+=\begin{pmatrix}0&0&b_{01}+b_{02}+b_{03}&b_{01}+b_{02}+b_{04}\end{pmatrix}^T
+}
+$$
+
+아랫줄에 남은 전구에 따라 눌러야 하는 스위치 구하기
+
+$$
+\displaylines{
+\mathbf{b}_{1,0}=A\begin{pmatrix}1&0&0&0\end{pmatrix}^T=\begin{pmatrix}1&1&1&0\end{pmatrix}^T\\
+\mathbf{b}_{1,f}=\mathbf{b}_{1,1}=A\begin{pmatrix}0&0&1&1\end{pmatrix}^T+b_{1,0}=\begin{pmatrix}0&0&1&0\end{pmatrix}^T\\
+\beta_1=\begin{pmatrix}b_{1,f3}&b_{1,f4}\end{pmatrix}^T=\begin{pmatrix}1&0\end{pmatrix}^T\\
+\chi_1=\begin{pmatrix}1&0&1&1\end{pmatrix}^T\\
+\mathbf{b}_{2,f}=\mathbf{b}_{2,1}=\begin{pmatrix}0&0&0&1\end{pmatrix}^T\\
+\beta_2=\begin{pmatrix}b_{2,f3}&b_{2,f4}\end{pmatrix}^T=\begin{pmatrix}0&1\end{pmatrix}^T\\
+\chi_2=\begin{pmatrix}0&1&1&1\end{pmatrix}^T\\
+\Beta=\begin{pmatrix}\beta_1&\beta_2\end{pmatrix}\\
+X=\begin{pmatrix}\chi_1&\chi_2\end{pmatrix}
+}
+$$
+
+최종해 구하기
+
+$$
+\beta_f=\begin{pmatrix}b_{f3}&b_{f4}\end{pmatrix}^T=\Beta\mathbf{c}=\mathbf{c}\\
+\mathbf{b}=\mathbf{b}_1+A\mathbf{x}_1\\
+A\mathbf{x}=AX\mathbf{c}+A\mathbf{x}_1\\
+\mathbf{x}=X\mathbf{c}+\mathbf{x}_1\\
+X\mathbf{c}=X\beta_f=\begin{pmatrix}1&0\\0&1\\1&1\\1&1\end{pmatrix}\begin{pmatrix}b_{01}+b_{02}+b_{03}&b_{01}+b_{02}+b_{04}\end{pmatrix}^T
+$$
