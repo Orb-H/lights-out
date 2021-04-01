@@ -147,7 +147,8 @@ $$
 \displaylines{
 \mathbf{b}_0=\mathbf{b}\\
 \mathbf{b}_1=\mathbf{b}_0+A\mathbf{x}_1\\
-\begin{pmatrix}b_{11}\\b_{12}\\b_{13}\\b_{14}\end{pmatrix}=\begin{pmatrix}b_{01}\\b_{02}\\b_{03}\\b_{04}\end{pmatrix}+\begin{pmatrix}Z&I\\I&Z\end{pmatrix}\begin{pmatrix}0\\0\\b_{01}\\b_{02}\end{pmatrix}=\begin{pmatrix}b_{01}+b_{01}\\b_{02}+b_{02}\\b_{03}+b_{01}+b_{02}\\b_{04}+b_{01}+b_{02}\end{pmatrix}=\begin{pmatrix}0\\0\\b_{01}+b_{02}+b_{03}\\b_{01}+b_{02}+b_{04}\end{pmatrix}
+\begin{pmatrix}b_{11}\\b_{12}\\b_{13}\\b_{14}\end{pmatrix}=\begin{pmatrix}b_{01}\\b_{02}\\b_{03}\\b_{04}\end{pmatrix}+\begin{pmatrix}Z_2&I_2\\I_2&Z_2\end{pmatrix}\begin{pmatrix}0\\0\\b_{01}\\b_{02}\end{pmatrix}=\begin{pmatrix}b_{01}+b_{01}\\b_{02}+b_{02}\\b_{03}+b_{01}+b_{02}\\b_{04}+b_{01}+b_{02}\end{pmatrix}=\begin{pmatrix}0\\0\\b_{01}+b_{02}+b_{03}\\b_{01}+b_{02}+b_{04}\end{pmatrix}\\
+Z_2=\begin{pmatrix}1&1\\1&1\end{pmatrix},I_2=\begin{pmatrix}1&0\\0&1\end{pmatrix}
 }
 $$
 
@@ -160,7 +161,7 @@ $$
 $$
 \displaylines{
 \mathbf{b}_{1,0}=A\begin{pmatrix}1&0&0&0\end{pmatrix}^T=\begin{pmatrix}1&1&1&0\end{pmatrix}^T\\
-\mathbf{b}_{1,1}=\mathbf{b}_{1,0}+A\mathbf{x}_{1,1}=\begin{pmatrix}1\\1\\1\\0\end{pmatrix}+\begin{pmatrix}Z&I\\I&Z\end{pmatrix}\begin{pmatrix}0\\0\\1\\1\end{pmatrix}=\begin{pmatrix}0\\0\\1\\0\end{pmatrix}
+\mathbf{b}_{1,1}=\mathbf{b}_{1,0}+A\mathbf{x}_{1,1}=\begin{pmatrix}1\\1\\1\\0\end{pmatrix}+\begin{pmatrix}Z_2&I_2\\I_2&Z_2\end{pmatrix}\begin{pmatrix}0\\0\\1\\1\end{pmatrix}=\begin{pmatrix}0\\0\\1\\0\end{pmatrix}
 }
 $$
 
@@ -246,7 +247,7 @@ $$
 $$
 \displaylines{
 B=\begin{pmatrix}\beta_1&\beta_2\end{pmatrix}=\begin{pmatrix}1&0\\0&1\end{pmatrix}\\
-\begin{pmatrix}b_{13}\\b_{14}\end{pmatrix}=B\mathbf{c}=I\mathbf{c}\\
+\begin{pmatrix}b_{13}\\b_{14}\end{pmatrix}=B\mathbf{c}=I_2\mathbf{c}\\
 \therefore\mathbf{c}=\begin{pmatrix}b_{13}\\b_{14}\end{pmatrix}\\
 X=\begin{pmatrix}\chi_1&\chi_2\end{pmatrix}=\begin{pmatrix}1&0\\0&1\\1&1\\1&1\end{pmatrix}\\
 \mathbf{x}=\mathbf{x}_0+X\mathbf{c}=\begin{pmatrix}0\\0\\b_{01}\\b_{02}\end{pmatrix}+\begin{pmatrix}b_{13}\\b_{14}\\b_{13}+b_{14}\\b_{13}+b_{14}\end{pmatrix}\\
