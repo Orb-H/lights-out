@@ -262,7 +262,7 @@ $$
 
 초기 상태
 
-$\mathbf{b}_0=\mathbf{b}$
+$$\mathbf{b}_0=\mathbf{b}$$
 
 가장 아랫줄만 남은 상태
 
@@ -280,7 +280,7 @@ $$
 $$
 \displaylines{
 \mathbf{b}_{1,0}=A\begin{pmatrix}1&0&0&0\end{pmatrix}^T=\begin{pmatrix}1&1&1&0\end{pmatrix}^T\\
-\mathbf{b}_{1,f}=\mathbf{b}_{1,1}=A\begin{pmatrix}0&0&1&1\end{pmatrix}^T+b_{1,0}=\begin{pmatrix}0&0&1&0\end{pmatrix}^T\\
+\mathbf{b}_{1,f}=\mathbf{b}_{1,1}=A\begin{pmatrix}0&0&1&1\end{pmatrix}^T+\mathbf{b}_{1,0}=\begin{pmatrix}0&0&1&0\end{pmatrix}^T\\
 \beta_1=\begin{pmatrix}b_{1,f3}&b_{1,f4}\end{pmatrix}^T=\begin{pmatrix}1&0\end{pmatrix}^T\\
 \chi_1=\begin{pmatrix}1&0&1&1\end{pmatrix}^T\\
 \mathbf{b}_{2,f}=\mathbf{b}_{2,1}=\begin{pmatrix}0&0&0&1\end{pmatrix}^T\\
