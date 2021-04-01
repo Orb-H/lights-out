@@ -359,3 +359,43 @@ $$
 $$
 \mathbf{b}_f=\mathbf{b}_2=\mathbf{b}_1+A\mathbf{x}_2=\mathbf{b}_0+A\mathbf{x}_1+A\mathbf{x}_2=\mathbf{b}+A(\mathbf{x}_1+\mathbf{x}_2)
 $$
+
+#### 2) Light Chasing 2단계(가장 윗줄 토글해서 아랫줄 지우기)를 행렬로 옮기기
+
+2×2 보드에서 했던 것과 같이 가장 윗줄의 스위치 중 가장 왼쪽의 것($x_1$)을 토글하고 1단계 방법을 다시 적용하는 과정을 나타내보겠다.
+
+$$
+\displaylines{
+\mathbf{b}_{1,0}=A\begin{pmatrix}1&0&0&0&0&0&0&0&0\end{pmatrix}^T=\begin{pmatrix}1&1&0&1&0&0&0&0&0\end{pmatrix}^T\\
+\mathbf{b}_{1,1}=\mathbf{b}_{1,0}+A\mathbf{x}_{1,1}=\begin{pmatrix}1\\1\\0\\1\\0\\0\\0\\0\\0\end{pmatrix}+\begin{pmatrix}Z_3&I_3&O_3\\I_3&Z_3&I_3\\O_3&I_3&Z_3\end{pmatrix}\begin{pmatrix}0\\0\\0\\1\\1\\0\\0\\0\\0\end{pmatrix}=\begin{pmatrix}0\\0\\0\\1\\0\\1\\1\\1\\0\end{pmatrix}\\
+\mathbf{b}_{1,2}=\mathbf{b}_{1,1}+A\mathbf{x}_{1,2}=\mathbf{b}_{1,1}+A\begin{pmatrix}0&0&0&0&0&0&1&0&1\end{pmatrix}^T=\begin{pmatrix}0&0&0&0&0&0&0&1&1\end{pmatrix}^T
+}
+$$
+
+이 때 누른 모든 스위치를 $\chi_1$, 남는 보드를 $\mathbf{b}_{1,f}$라고 써보면 아래와 같은 식을 만족한다.
+
+$$
+\displaylines{
+\chi_1=\begin{pmatrix}1&0&0&0&0&0&0&0&0\end{pmatrix}^T+\mathbf{x}_1+\mathbf{x}_2=\begin{pmatrix}1&0&0&1&1&0&1&0&1\end{pmatrix}^T\\
+\mathbf{b}_{1,f}=\mathbf{b}_{1,2}=\begin{pmatrix}0&0&0&0&0&0&0&1&1\end{pmatrix}^T
+}
+$$
+
+마찬가지의 방법으로 다른 $\chi_i$와 $\mathbf{b}_{i,f}$를 구해보면 아래와 같다.
+
+$$
+\displaylines{
+\mathbf{b}_{2,f}=\mathbf{b}_{2,2}=\begin{pmatrix}0&0&0&0&0&0&1&1&1\end{pmatrix}^T
+\chi_2=\begin{pmatrix}0&0&0&1&1&1&0&0&0\end{pmatrix}^T\\
+\mathbf{b}_{3,f}=\text{x-flip}(\mathbf{b}_{1,f})=\begin{pmatrix}0&0&0&0&0&0&1&1&0\end{pmatrix}^T\\
+\chi_3=\text{x-flip}(\chi_1)=\begin{pmatrix}0&0&1&0&1&1&1&0&1\end{pmatrix}
+}
+$$
+
+$\mathbf{b}_{3,f}$와 $\chi_3$의 경우 1번 스위치를 누르는 경우와 거울상이므로 단순히 가로 방향으로 뒤집은 값으로 해도 계산한 결과와 똑같이 나온다.
+
+그리고 2×2 때와 마찬가지로 $\mathbf{b}_{i,f}$와 $\chi_i$는 아래와 같은 관계를 만족한다.
+
+$$
+\mathbf{b}_{i,f}=A\chi_i
+$$
