@@ -308,7 +308,7 @@ $$
 
 *역시 여기서도 모든 변수는 $\mathbb{Z}_2$에 속한다.*
 
-*새로운 기호 $\displaystyle{\sum_mathbf{b} m(1,4,5,...)}$를 제시한다. 의미는 벡터 $\mathbf{b}$의 1번째, 4번째, 5번째, ... 의 원소의 합이다. (카르노 맵에서 사용하는 기호에서 가져왔다)*
+*새로운 기호 $\displaystyle{\sum_{mathbf{b}} m(1,4,5,...)}$를 제시한다. 의미는 벡터 $\mathbf{b}$의 1번째, 4번째, 5번째, ... 의 원소의 합이다. (카르노 맵에서 사용하는 기호에서 가져왔다)*
 
 #### 1) 1단계
 
@@ -350,7 +350,7 @@ $$
 \displaylines{
 \mathbf{b}_2=\mathbf{b}_1+A\mathbf{x}_2\\
 \mathbf{x}_2=\begin{pmatrix}0&0&0&0&0&0&b_{14}&b_{15}&b_{16}\end{pmatrix}^T\\
-=\begin{matrix}0&0&0&0&0&0&sum_{\mathbf{b}_0} m(1,2,4)&\sum_{\mathbf{b}_0} m(1,2,3,5)&\sum_{\mathbf{b}_0} m(2,3,6)\end{pmatrix}^T\\
+=\begin{pmatrix}0&0&0&0&0&0&\sum_{\mathbf{b}_0} m(1,2,4)&\sum_{\mathbf{b}_0} m(1,2,3,5)&\sum_{\mathbf{b}_0} m(2,3,6)\end{pmatrix}^T\\
 \mathbf{b}_2=\begin{pmatrix}0\\0\\0\\0\\0\\0\\b_{14}+b_{15}+b_{17}\\b_{14}+b_{15}+b_{16}+b_{18}\\b_{15}+b_{16}+b_{19}\end{pmatrix}=\begin{pmatrix}0\\0\\0\\0\\0\\0\\\sum_{\mathbf{b}_0} m(1,3,4,5,7)\\\sum_{\mathbf{b}_0} m(4,5,6,8)\\\sum_{\mathbf{b}_0} m(1,3,5,6,9)\end{pmatrix}
 }
 $$
@@ -361,7 +361,7 @@ $$
 \displaylines{
 \mathbf{b}_f=\mathbf{b}+A\mathbf{x}_f
 \mathbf{b}_f=\mathbf{b}_2=\mathbf{b}_1+A\mathbf{x}_2=\mathbf{b}_0+A\mathbf{x}_1+A\mathbf{x}_2=\mathbf{b}+A(\mathbf{x}_1+\mathbf{x}_2\\
-\mathbf{x}_{+}=\mathbf{x}_1+\mathbf{x}_2=\begin{pmatrix}0\\0\\0\\b_{01}\\b_{02}\\b_{03}\\sum_{\mathbf{b}_0} m(1,2,4)\\\sum_{\mathbf{b}_0} m(1,2,3,5)\\\sum_{\mathbf{b}_0} m(2,3,6)\end{pmatrix}
+\mathbf{x}_{+}=\mathbf{x}_1+\mathbf{x}_2=\begin{pmatrix}0\\0\\0\\b_{01}\\b_{02}\\b_{03}\\\sum_{\mathbf{b}_0} m(1,2,4)\\\sum_{\mathbf{b}_0} m(1,2,3,5)\\\sum_{\mathbf{b}_0} m(2,3,6)\end{pmatrix}
 }
 $$
 
