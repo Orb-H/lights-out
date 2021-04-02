@@ -338,8 +338,8 @@ $$
 \displaylines{
 \mathbf{b}_0=\mathbf{b}\\
 \mathbf{b}_1=\mathbf{b}_0+A\mathbf{x}_1\\
-\begin{pmatrix}b_{11}\\b_{12}\\b_{13}\\b_{14}\\b_{15}\\b_{16}\\b_{17}\\b_{18}\\b_{19}\end{pmatrix}=\begin{pmatrix}b_{01}\\b_{02}\\b_{03}\\b_{04}\\b_{05}\\b_{06}\\b_{07}\\b_{08}\\b_{09}\end{pmatrix}+\begin{pmatrix}Z_3&I_3&O_3\\I_3&Z_3&I_3\\O_3&I_3&Z_3\end{pmatrix}\begin{pmatrix}0\\0\\0\\b_{01}\\b_{02}\\b_{03}\\0\\0\\0\end{pmatrix}\\
-=\begin{pmatrix}b_{01}+b_{01}\\b_{02}+b_{02}\\b_{03}+b_{03}\\b_{04}+b_{01}+b_{02}\\b_{05}+b_{01}+b_{02}+b_{03}\\b_{06}+b_{02}+b_{03}\\b_{07}+b_{01}\\b_{08}+b_{02}\\b_{09}+b_{03}\end{pmatrix}=\begin{pmatrix}0\\0\\0\\b_{04}+b_{01}+b_{02}\\b_{05}+b_{01}+b_{02}+b_{03}\\b_{06}+b_{02}+b_{03}\\b_{07}+b_{01}\\b_{08}+b_{02}\\b_{09}+b_{03}\end{pmatrix}\\
+\mathbf{b}_1=\mathbf{b}_0+\begin{pmatrix}Z_3&I_3&O_3\\I_3&Z_3&I_3\\O_3&I_3&Z_3\end{pmatrix}\begin{pmatrix}0\\0\\0\\b_{01}\\b_{02}\\b_{03}\\0\\0\\0\end{pmatrix}\\
+=\begin{pmatrix}b_{01}+b_{01}\\b_{02}+b_{02}\\b_{03}+b_{03}\\b_{04}+b_{01}+b_{02}\\b_{05}+b_{01}+b_{02}+b_{03}\\b_{06}+b_{02}+b_{03}\\b_{07}+b_{01}\\b_{08}+b_{02}\\b_{09}+b_{03}\end{pmatrix}=\begin{pmatrix}0\\0\\0\\\sum_{\mathbf{b}_0} m(1,2,4)\\\sum_{\mathbf{b}_0} m(1,2,3,5)\\\sum_{\mathbf{b}_0} m(2,3,6)\\\sum_{\mathbf{b}_0} m(1,7)\\\sum_{\mathbf{b}_0} m(2,8)\\\sum_{\mathbf{b}_0} m(3,9)\end{pmatrix}\\
 Z_3=\begin{pmatrix}1&1&0\\1&1&1\\0&1&1\end{pmatrix},I_3=\begin{pmatrix}1&0&0\\0&1&0\\0&0&1\end{pmatrix},O_3=\begin{pmatrix}0&0&0\\0&0&0\\0&0&0\end{pmatrix}
 }
 $$
@@ -349,15 +349,20 @@ $$
 $$
 \displaylines{
 \mathbf{b}_2=\mathbf{b}_1+A\mathbf{x}_2\\
-\mathbf{x}_2=\begin{pmatrix}0&0&0\\0&0&0\\b_{14}&b_{15}&b_{16}\end{pmatrix}\\
-\mathbf{b}_2=\begin{pmatrix}0\\0\\0\\0\\0\\0\\b_{14}+b_{15}+b_{17}\\b_{14}+b_{15}+b_{16}+b_{18}\\b_{15}+b_{16}+b_{19}\end{pmatrix}=\begin{pmatrix}0\\0\\0\\0\\0\\0\\b_{01}+b_{03}+b_{04}+b_{05}+b_{07}\\b_{04}+b_{05}+b_{06}+b_{08}\\b_{01}+b_{03}+b_{05}+b_{06}+b_{09}\end{pmatrix}
+\mathbf{x}_2=\begin{pmatrix}0&0&0&0&0&0&b_{14}&b_{15}&b_{16}\end{pmatrix}^T\\
+=\begin{matrix}0&0&0&0&0&0&sum_{\mathbf{b}_0} m(1,2,4)&\sum_{\mathbf{b}_0} m(1,2,3,5)&\sum_{\mathbf{b}_0} m(2,3,6)\end{pmatrix}^T\\
+\mathbf{b}_2=\begin{pmatrix}0\\0\\0\\0\\0\\0\\b_{14}+b_{15}+b_{17}\\b_{14}+b_{15}+b_{16}+b_{18}\\b_{15}+b_{16}+b_{19}\end{pmatrix}=\begin{pmatrix}0\\0\\0\\0\\0\\0\\\sum_{\mathbf{b}_0} m(1,3,4,5,7)\\\sum_{\mathbf{b}_0} m(4,5,6,8)\\\sum_{\mathbf{b}_0} m(1,3,5,6,9)\end{pmatrix}
 }
 $$
 
 즉, 1단계를 진행한 결과는 다음과 같다.
 
 $$
-\mathbf{b}_f=\mathbf{b}_2=\mathbf{b}_1+A\mathbf{x}_2=\mathbf{b}_0+A\mathbf{x}_1+A\mathbf{x}_2=\mathbf{b}+A(\mathbf{x}_1+\mathbf{x}_2)
+\displaylines{
+\mathbf{b}_f=\mathbf{b}+A\mathbf{x}_f
+\mathbf{b}_f=\mathbf{b}_2=\mathbf{b}_1+A\mathbf{x}_2=\mathbf{b}_0+A\mathbf{x}_1+A\mathbf{x}_2=\mathbf{b}+A(\mathbf{x}_1+\mathbf{x}_2\\
+\mathbf{x}_{+}=\mathbf{x}_1+\mathbf{x}_2=\begin{pmatrix}0\\0\\0\\b_{01}\\b_{02}\\b_{03}\\sum_{\mathbf{b}_0} m(1,2,4)\\\sum_{\mathbf{b}_0} m(1,2,3,5)\\\sum_{\mathbf{b}_0} m(2,3,6)\end{pmatrix}
+}
 $$
 
 #### 2) 2단계
