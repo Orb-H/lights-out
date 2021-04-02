@@ -430,7 +430,7 @@ c_1\mathbf{b}_{1,f}+c_2\mathbf{b}_{2,f}+c_3\mathbf{b}_{3,f}=c_1A\chi_1+c_2A\chi_
 }
 $$
 
-이제 $\mathbf{b}_2=\mathbf{b}_0+A\mathbf{x}_{+}$을 사용하면 아래와 같이 된다.
+이제 $\mathbf{b}_2$에 대한 관계식을 사용하여 해를 구할 수 있다.
 
 $$
 \displaylines{
