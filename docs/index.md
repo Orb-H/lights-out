@@ -451,3 +451,21 @@ $$
 $$
 \mathbf{x}=\mathbf{x}_{+}+X\mathbf{c}(X=\begin{pmatrix}\chi_1&\chi_2&\chi_3\end{pmatrix})
 $$
+
+#### 4) 검산
+
+이제 위의 식을 실제 값으로 바꾸어 계산해보겠다.
+
+$$
+\displaylines{
+B=\begin{pmatrix}\beta_1&\beta_2&\beta_3\end{pmatrix}=\begin{pmatrix}0&1&1\\1&1&1\\1&1&0\end{pmatrix}\\
+\begin{pmatrix}b_{27}\\b_{28}\\b_{29}\end{pmatrix}=B\mathbf{c}=\begin{pmatrix}c_2+c_3\\c_1+c_2+c_3\\c_1+c_2\end{pmatrix}\\
+B^{-1}=\begin{pmatrix}1&1&0\\1&1&1\\0&1&1\end{pmatrix}\\
+\therefore\mathbf{c}=B^{-1}\begin{pmatrix}b_{27}\\b_{28}\\b_{29}\end{pmatrix}=\begin{pmatrix}b_{27}+b_{28}\\b_{27}+b_{28}+b_{29}\\b_{28}+b_{29}\end{pmatrix}\\
+\mathbf{x}=\mathbf{x}_{+}+X\mathbf{c}=\begin{pmatrix}0\\0\\0\\b_{01}\\b_{02}\\b_{03}\\\sum_{\mathbf{b}_0} m(1,2,4)\\\sum_{\mathbf{b}_0} m(1,2,3,5)\\\sum_{\mathbf{b}_0} m(2,3,6)\end{pmatrix}+\begin{pmatrix}b_{27}+b_{28}\\b_{27}+b_{28}+b_{29}\\b_{28}+b_{29}\\b_{29}\\b_{28}\\b_{27}\\b_{27}+b_{29}\\0\\b_{27}+b_{29}\end{pmatrix}\\
+=\begin{pmatrix}0\\0\\0\\b_{1}\\b_{2}\\b_{3}\\\sum_{\mathbf{b}} m(1,2,4)\\\sum_{\mathbf{b}} m(1,2,3,5)\\\sum_{\mathbf{b}} m(2,3,6)\end{pmatrix}+\begin{pmatrix}\sum_{\mathbf{b}} m(1,3,6,7,8)\\\sum_{\mathbf{b}} m(5,7,8,9)\\\sum_{\mathbf{b}} m(1,3,4,8,9)\\\sum_{\mathbf{b}} m(1,3,5,6,9)\\\sum_{\mathbf{b}} m(4,5,6,8)\\\sum_{\mathbf{b}} m(1,3,4,5,7)\\\sum_{\mathbf{b}} m(4,6,7,9)\\0\\\sum_{\mathbf{b}} m(4,6,7,9)\end{pmatrix}\\
+=\begin{pmatrix}1&0&1&0&0&1&1&1&0\\0&0&0&0&1&0&1&1&1\\1&0&1&1&0&0&0&1&1\\0&0&1&0&1&1&0&0&1\\0&0&0&1&1&1&0&1&0\\1&0&0&1&1&0&1&0&0\\1&0&0&0&0&1&1&0&1\\1&0&1&0&1&0&0&0&0\\0&0&1&1&0&0&1&0&1\end{pmatrix}\mathbf{b}
+}
+$$
+
+$\mathbb{Z}_2$ 위에서의 $A$의 역행렬은 존재하며, 그 값은 위 행렬의 값과 같다.
