@@ -16,10 +16,7 @@ MathJax = {
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="//cdn.jsdelivr.net/font-nanum/1.0/nanumbarungothic/nanumbarungothic.css">
 <style>
-body{
-    font-family: 'Noto Sans KR', Calibri, Helvetica, Arial, sans-serif;
-}
-h1,h2,h3,h4,h5,h6{
+body,h1,h2,h3,h4,h5,h6{
     font-family: 'Noto Sans KR', Calibri, Helvetica, Arial, sans-serif;
 }
 </style>
