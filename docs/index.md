@@ -358,7 +358,7 @@ $$
 \mathbf{b}_f=\mathbf{b}_2=\mathbf{b}_1+A\mathbf{x}_2=\mathbf{b}_0+A\mathbf{x}_1+A\mathbf{x}_2=\mathbf{b}+A(\mathbf{x}_1+\mathbf{x}_2)
 $$
 
-#### 2) Light Chasing 2단계(가장 윗줄 토글해서 아랫줄 지우기)를 행렬로 옮기기
+#### 2) 2단계
 
 2×2 보드에서 했던 것과 같이 가장 윗줄의 스위치 중 가장 왼쪽의 것($x_1$)을 토글하고 1단계 방법을 다시 적용하는 과정을 나타내보겠다.
 
