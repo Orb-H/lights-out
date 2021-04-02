@@ -407,3 +407,47 @@ $\mathbf{b}_{3,f}$와 $\chi_3$의 경우 1번 스위치를 누르는 경우와 �
 $$
 \mathbf{b}_{i,f}=A\chi_i
 $$
+
+#### 3) 3단계
+
+1단계를 진행한 후 남은 보드($\mathbf{b}$)와 $\mathbf{b}_{i,f}$에 대해 아래의 식을 만족하는 $c_i$가 있다고 하고 식을 써보겠다.
+
+$$
+\displaylines{
+\mathbf{b}_f+c_1\mathbf{b}_{1,f}+c_2\mathbf{b}_{2,f}+c_3\mathbf{b}_{3,f}=0\\
+\mathbf{b}_f=c_1\mathbf{b}_{1,f}+c_2\mathbf{b}_{2,f}+c_3\mathbf{b}_{3,f}
+}
+$$
+
+그리고 이 때 사용하는 스위치는 아래와 같다.
+
+$$
+\displaylines{
+\mathbf{b}_f=c_1\mathbf{b}_{1,f}+c_2\mathbf{b}_{2,f}+c_3\mathbf{b}_{3,f}\\
+\mathbf{b}_f=A\mathbf{x}_f\\
+c_1\mathbf{b}_{1,f}+c_2\mathbf{b}_{2,f}+c_3\mathbf{b}_{3,f}=c_1A\chi_1+c_2A\chi_2+c_3A\chi_3\\
+\therefore\mathbf{x}_f=c_1\chi_1+c_2\chi_2+c_3\chi_3
+}
+$$
+
+이제 $\mathbf{b}_2=\mathbf{b}_0+A\mathbf{x}_{+}$을 사용하면 아래와 같이 된다.
+
+$$
+\displaylines{
+A\mathbf{x}=\mathbf{b}_0=\mathbf{b}_2+A\mathbf{x}_{+}=A\mathbf{x}_{+}+c_1A\chi_1+c_2A\chi_2+c_3A\chi_3\\
+\mathbf{x}=\mathbf{x}_{+}+c_1\chi_1+c_2\chi_2+c_3\chi_3
+}
+$$
+
+이제 2×2 때와 같이 변수 $\beta_i$를 선언한다. $\beta_i$는 $\mathbf{b}_{i,f}$의 아래부터 3개의 원소를 원소로 가지는 벡터이다. 그러면 $\beta_i$는 아래와 같은 관계를 만족한다.
+
+$$
+\begin{pmatrix}b_{27}\\b_{28}\\b_{29}\end{pmatrix}=c_1\beta_1+c_2\beta_2+c_3\beta_3\\
+=\begin{pmatrix}\beta_1&\beta_2&\beta_3\end{pmatrix}\begin{pmatrix}c_1\\c_2\\c_3\end{pmatrix}=B\mathbf{c}
+$$
+
+이를 만족하는 $\mathbf{c}$를 찾아서 아래의 식에 대입하면 해가 나온다.
+
+$$
+\mathbf{x}=\mathbf{x}_{+}+X\mathbf{c}(X=\begin{pmatrix}\chi_1&\chi_2&\chi_3\end{pmatrix})
+$$
