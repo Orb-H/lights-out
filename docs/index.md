@@ -480,7 +480,8 @@ $$
 \displaylines{
 \mathbf{x}_{+}=\begin{pmatrix}0\\0\\0\\0\\\b_{1}\\b_{2}\\b_{3}\\b_{4}\\\sum_{\mathbf{b}} m(1,2,5)\sum_{\mathbf{b}} m(1,2,3,6)\\\sum_{\mathbf{b}} m(2,3,4,7)\\\sum_{\mathbf{b}} m(3,4,8)\\\sum_{\mathbf{b}} m(1,3,5,6,9)\\\sum_{\mathbf{b}} m(4,5,6,7,10)\\\sum_{\mathbf{b}} m(1,6,7,8,11)\\\sum_{\mathbf{b}} m(2,4,7,8,12)\end{pmatrix}\\
 \mathbf{b}_f=\begin{pmatrix}0\\0\\...\\0\\\sum_{\mathbf{b}} m(2,3,4,5,7,9,10,13)\\\sum_{\mathbf{b}} m(1,2,4,8,9,10,11,14)\\\sum_{\mathbf{b}} m(1,3,4,5,10,11,12,15)\\\sum_{\mathbf{b}} m(1,2,3,6,8,11,12,16)\end{pmatrix}\\
-B=\begin{pmatrix}\beta_1&\beta_2&\beta_3&\beta_4\end{pmatrix}=\begin{pmatrix}0&0&0&0\\0&0&0&0\\0&0&0&0\\0&0&0&0\end{pmatrix}\\
+B=\begin{pmatrix}\beta_1&\beta_2&\beta_3&\beta_4\end{pmatrix}=\begin{pmatrix}0&0&0&0\\0&0&0&0\\0&0&0&0\\0&0&0&0\end{pmatrix}
+}
 $$
 
 여기까지의 과정에서 다른 보드와 구별되는 점이 있다면 행렬 $B$의 역행렬이 존재하지 않는다는 것이다. 게다가 무려 영행렬이다. 이 경우 아래의 식을 보면 더욱 이해가 빠를 것이다.
@@ -494,7 +495,7 @@ $$
 $$
 \displaylines{
 X=\begin{pmatrix}0&0&0&0&1&1&0&0&1&0&1&0&0&1&1&1\\0&0&0&0&1&1&1&0&0&0&0&1&1&1&0&1\\0&0&0&0&0&1&1&1&1&0&0&0&1&0&1&1\\0&0&0&0&0&0&1&1&0&1&0&1&1&1&1&0\end{pmatrix}^T\\
-\mathbf{c}=\alpha_1\begin{pmatrix}1\\0\\0\\0\end{pmatrix}+\alpha_2\begin{pmatrix}0\\1\\0\\0\end{pmatrix}+\alpha_3\begin{pmatrix}0\\0\\1\\0\end{pmatrix}+\alpha_4\begin{pmatrix}0\\0\\0\\1\end{pmatrix},\alpha_i\in\mathbb{Z}_2\\
+\mathbf{c}=\alpha_1\begin{pmatrix}\alpha_1\\\alpha_2\\\alpha_3\\\alpha_4\end{pmatrix},\alpha_i\in\mathbb{Z}_2\\
 \mathbf{x}=\mathbf{x}_{+}+X\mathbf{c}
 }
 $$
