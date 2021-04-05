@@ -469,3 +469,44 @@ B^{-1}=\begin{pmatrix}1&1&0\\1&1&1\\0&1&1\end{pmatrix}\\
 $$
 
 $\mathbb{Z}_2$ 위에서의 $A$의 역행렬은 존재하며, 그 값은 위 행렬의 값과 같다.
+
+### 4. 4x4 보드
+
+*역시 여기도 $\mathbb{Z}_2$ 위에서 연산을 진행한다.*
+
+같은 방식으로 진행하면 아래와 같이 된다.
+
+$$
+\displaylines{
+\mathbf{x}_{+}=\begin{pmatrix}0\\0\\0\\0\\\b_{1}\\b_{2}\\b_{3}\\b_{4}\\\sum_{\mathbf{b}} m(1,2,5)\sum_{\mathbf{b}} m(1,2,3,6)\\\sum_{\mathbf{b}} m(2,3,4,7)\\\sum_{\mathbf{b}} m(3,4,8)\\\sum_{\mathbf{b}} m(1,3,5,6,9)\\\sum_{\mathbf{b}} m(4,5,6,7,10)\\\sum_{\mathbf{b}} m(1,6,7,8,11)\\\sum_{\mathbf{b}} m(2,4,7,8,12)\end{pmatrix}\\
+\mathbf{b}_f=\begin{pmatrix}0\\0\\...\\0\\\sum_{\mathbf{b}} m(2,3,4,5,7,9,10,13)\\\sum_{\mathbf{b}} m(1,2,4,8,9,10,11,14)\\\sum_{\mathbf{b}} m(1,3,4,5,10,11,12,15)\\\sum_{\mathbf{b}} m(1,2,3,6,8,11,12,16)\end{pmatrix}\\
+B=\begin{pmatrix}\beta_1&\beta_2&\beta_3&\beta_4\end{pmatrix}=\begin{pmatrix}0&0&0&0\\0&0&0&0\\0&0&0&0\\0&0&0&0\end{pmatrix}\\
+$$
+
+여기까지의 과정에서 다른 보드와 구별되는 점이 있다면 행렬 $B$의 역행렬이 존재하지 않는다는 것이다. 게다가 무려 영행렬이다. 이 경우 아래의 식을 보면 더욱 이해가 빠를 것이다.
+
+$$
+\begin{pmatrix}b_{f13}&b_{f14}&b_{f15}&b_{f16}\end{pmatrix}^T=\mathbf{O}\mathbf{c}=\mathbf{0}
+$$
+
+즉, Light Chasing 기법을 사용해서 남은 결과가 무조건 보드의 전구가 모두 꺼진 상태여야만 해가 존재한다는 것이다. 다른 말로는 추가적인 단계 없이 Light Chasing 기법만 한 번 적용하면 보드가 해결된다는 것이다. 또한 위의 식에 의해 $\mathbf{c}$는 부정이 되는데, 이 때 가능한 벡터의 값으로는 $\mathbb{Z}_2^4$에 속하는 모든 벡터가 된다. 이 사실을 이용해서 아래와 같이 계산해보면 주어진 보드에 대해 해가 어떻게 되는지 알 수 있다.
+
+$$
+\displaylines{
+X=\begin{pmatrix}0&0&0&0&1&1&0&0&1&0&1&0&0&1&1&1\\0&0&0&0&1&1&1&0&0&0&0&1&1&1&0&1\\0&0&0&0&0&1&1&1&1&0&0&0&1&0&1&1\\0&0&0&0&0&0&1&1&0&1&0&1&1&1&1&0\end{pmatrix}^T\\
+\mathbf{c}=\alpha_1\begin{pmatrix}1\\0\\0\\0\end{pmatrix}+\alpha_2\begin{pmatrix}0\\1\\0\\0\end{pmatrix}+\alpha_3\begin{pmatrix}0\\0\\1\\0\end{pmatrix}+\alpha_4\begin{pmatrix}0\\0\\0\\1\end{pmatrix},\alpha_i\in\mathbb{Z}_2\\
+\mathbf{x}=\mathbf{x}_{+}+X\mathbf{c}
+}
+$$
+
+$\mathbf{x}_{+}$는 보드에 따라 항상 한 가지의 경우가 나오기 때문에 보드의 해인 $\mathbf{x}$의 가능한 가짓수는 $\mathbf{c}$의 가짓수인 $2^4=16$가지가 된다. 이제 단순히 행렬을 가지고 푸는 방법을 사용해서 해석해보겠다.
+
+$\mathbf{b}=A\mathbf{x}$로 나타낼 수 있었는데, 여기서 행렬 $A$를 분석해보면 아래와 같다.
+
+$$
+A=\begin{pmatrix}Z_4&I_4&O_4&O_4\\I_4&Z_4&I_4&O_4\\O_4&I_4&Z_4&I_4\\O_4&O_4&I_4&Z_4\end{pmatrix}
+$$
+
+이 행렬 $A$를 Elementary Row Operation을 사용해서 RREF 형태로 만들어보면 아래 4개의 행이 모두 0이다. 즉, $\text{rank}(A)=12,\text{null}(A)=4$이다. 이것은 $\mathbb{Z}_2^{16}$ 위의 적당한 4개의 벡터 $n_1$, $n_2$, $n_3$, $n_4$에 대해 $\mathbf{b}=A\mathbf{x}$를 만족하는 $\mathbf{x}$가 존재한다면 $\mathbf{x}'=\mathbf{x}+\sum_{i=1}^4 \alpha_i n_i,\alpha_i\in\mathbb{Z}_2^4$ 또한 위 방정식의 해가 된다는 의미이다. 즉, $\mathbf{b}=A\mathbf{x}'$이다.
+
+기존의 방법대로 분석을 해본 결과 $\text{null}(A)=4=\text{null}(B)$임을 알아내었다. 또한 특정 보드에 대해 해가 존재한다면 반드시 16개인 점 또한 같다.(물론 $\text{null}(A)=\text{null}(B)$인 점에서 당연히 같다.)
