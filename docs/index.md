@@ -190,45 +190,39 @@ $$
 
 #### 3) Light Chasing 3단계(최종해 구하기)를 행렬로 옮기기
 
-1단계를 진행한 후 남은 보드에는 가장 아랫줄만 남아있다. 이제 여기에 $\mathbf{b}_{i,f}$를 적당히 더하면 보드의 전구가 모두 꺼지는 경우가 있을 것이다. 식으로 나타내면 아래와 같다.
+1단계를 진행한 후 남은 보드에는 가장 아랫줄만 남아있다. 이제 여기에 $\chi_i$를 적당히 진행하면 보드의 전구가 모두 꺼지는 경우가 있을 것이다. 식으로 나타내면 아래와 같다.
 
 $$
 \displaylines{
-\mathbf{b}_f+c_1\mathbf{b}_{1,f}+c_2\mathbf{b}_{2,f}=0\\
+\mathbf{x}_f=c_1\chi_1+c_2\chi_2\\
+A\mathbf{x}_f=c_1A\chi_1+c_2A\chi_2\\
 \mathbf{b}_f=c_1\mathbf{b}_{1,f}+c_2\mathbf{b}_{2,f}
 }
 $$
 
-그리고 이 때 사용하는 스위치는 아래와 같이 구할 수 있다.
+남은 보드에 대해 위의 $\mathbf{x}_f$로 불을 모두 끌 수 있다면 1단계에 해당하는 해인 $\mathbf{x}_1$을 진행한 후 $\mathbf{x}_f$를 진행하면 모든 전구의 불을 끌 수 있는 것이다. 따라서 아래와 같이 된다.
+
+$$
+\displaylines{
+\mathbf{x}=\mathbf{x}_1+\mathbf{x}_f\\
+A\mathbf{x}=A\mathbf{x}_1+A\mathbf{x}_f\\
+\mathbf{b}=\mathbf{b}_f+c_1\mathbf{b}_{1,f}+c_2\mathbf{b}_{2,f}
+}
+$$
+
+위의 식에서 구하지 않은 상태로 남아있는 것은 이제 $c_1$과 $c_2$뿐이다. 이 상수는 새로운 행렬 방정식 하나를 풀면 구할 수 있다. 그 전에 새로운 변수 $\beta_i$를 선언한다. $\beta_i$는 $\mathbf{b}_{i,f}$의 아래부터 2개의 원소를 원소로 가지는 벡터이다. 그렇게 잡은 이유는 어차피 $\mathbf{b}_i$는 아래의 2개의 원소를 제외하면 모두 0이기 때문이다. 그러면 $\beta_i$는 아래와 같은 관계를 만족한다.
 
 $$
 \displaylines{
 \mathbf{b}_f=c_1\mathbf{b}_{1,f}+c_2\mathbf{b}_{2,f}\\
-\mathbf{b}_f=A\mathbf{x}_f\\
-c_1\mathbf{b}_{1,f}+c_2\mathbf{b}_{2,f}=c_1A\chi_1+c_2A\chi_2\\
-\therefore\mathbf{x}_f=c_1\chi_1+c_2\chi_2
+\therefore\begin{pmatrix}b_{f3}\\b_{f4}\end{pmatrix}=\beta_f=c_1\beta_1+c_2\beta_2
 }
-$$
-
-이제 1단계에서 사용했던 관계식인 $\mathbf{b}_1=\mathbf{b}_0+A\mathbf{x}_1$을 사용하면 아래와 같이 유도할 수 있다.
-
-$$
-\displaylines{
-A\mathbf{x}=\mathbf{b}_0=\mathbf{b}_1+A\mathbf{x}_1=A\mathbf{x}_1+c_1A\chi_1+c_2A\chi_2\\
-\mathbf{x}=\mathbf{x}_1+c_1\chi_1+c_2\chi_2
-}
-$$
-
-위의 식에서 구하지 않은 상태로 남아있는 것은 이제 $c_1$과 $c_2$뿐이다. 이 상수는 새로운 행렬 방정식 하나를 풀면 구할 수 있다. 그 전에 새로운 변수 $\beta_i$를 선언한다. $\beta_i$는 $\mathbf{b}_{i,f}$의 아래부터 2개의 원소를 원소로 가지는 벡터이다. 그러면 $\beta_i$는 아래와 같은 관계를 만족한다.
-
-$$
-\begin{pmatrix}b_{13}\\b_{14}\end{pmatrix}=c_1\beta_1+c_2\beta_2
 $$
 
 이를 조금 변형시켜서 쓰면 아래와 같이 된다.
 
 $$
-\begin{pmatrix}b_{13}\\b_{14}\end{pmatrix}=\begin{pmatrix}\beta_1&\beta_2\end{pmatrix}\begin{pmatrix}c_1\\c_2\end{pmatrix}=B\mathbf{c}
+\beta_f=\begin{pmatrix}\beta_1&\beta_2\end{pmatrix}\begin{pmatrix}c_1\\c_2\end{pmatrix}=B\mathbf{c}
 $$
 
 이를 만족하는 $\mathbf{c}$를 찾아서 아래의 식에 대입하면 해가 나온다.
@@ -236,6 +230,8 @@ $$
 $$
 \mathbf{x}=\mathbf{x}_1+X\mathbf{c}(X=\begin{pmatrix}\chi_1&\chi_2\end{pmatrix})
 $$
+
+$\mathbf{c}$를 구하는 것은 행렬 방정식 $\beta_f=B\mathbf{c}$를 풀면 된다. 여기서 행렬 $B$는 아래에서도 구하겠지만 $I$이기 때문에 단순히 $\mathbf{c}=\beta_f$가 된다.
 
 #### 4) 검산
 
@@ -414,35 +410,25 @@ $$
 
 $$
 \displaylines{
-\mathbf{b}_f+c_1\mathbf{b}_{1,f}+c_2\mathbf{b}_{2,f}+c_3\mathbf{b}_{3,f}=0\\
+\mathbf{x}_f=c_1\chi_1+c_2\chi_2+c_3\chi_3\\
+A\mathbf{x}_f=c_1A\chi_1+c_2A\chi_2+c_3A\chi_3\\
 \mathbf{b}_f=c_1\mathbf{b}_{1,f}+c_2\mathbf{b}_{2,f}+c_3\mathbf{b}_{3,f}
 }
 $$
 
-그리고 이 때 사용하는 스위치는 아래와 같다.
+이제 $\mathbf{b}$를 $\mathbf{b}_f$로 만드는 $\mathbf{x}_{+}$와 $\mathbf{b}_f$를 $\mathbf{0}$응로 만드는 $\mathbf{x}_f$를 연속으로 적용하면 $\mathbf{b}$를 $\mathbf{0}$으로 만들 수 있을 것이다.
 
 $$
 \displaylines{
-\mathbf{b}_f=c_1\mathbf{b}_{1,f}+c_2\mathbf{b}_{2,f}+c_3\mathbf{b}_{3,f}\\
-\mathbf{b}_f=A\mathbf{x}_f\\
-c_1\mathbf{b}_{1,f}+c_2\mathbf{b}_{2,f}+c_3\mathbf{b}_{3,f}=c_1A\chi_1+c_2A\chi_2+c_3A\chi_3\\
-\therefore\mathbf{x}_f=c_1\chi_1+c_2\chi_2+c_3\chi_3
-}
-$$
-
-이제 $\mathbf{b}_2$에 대한 관계식을 사용하여 해를 구할 수 있다.
-
-$$
-\displaylines{
-A\mathbf{x}=\mathbf{b}_0=\mathbf{b}_2+A\mathbf{x}_{+}=A\mathbf{x}_{+}+c_1A\chi_1+c_2A\chi_2+c_3A\chi_3\\
-\mathbf{x}=\mathbf{x}_{+}+c_1\chi_1+c_2\chi_2+c_3\chi_3
+\mathbf{x}=\mathbf{x}_{+}+\mathbf{x}_f=\mathbf{x}_{+}+c_1\chi_1+c_2\chi_2+c_3\chi_3
+A\mathbf{x}=\mathbf{b}_0=A\mathbf{x}_{+}+\mathbf{b}_f=A\mathbf{x}_{+}+c_1A\chi_1+c_2A\chi_2+c_3A\chi_3\\
 }
 $$
 
 이제 2×2 때와 같이 변수 $\beta_i$를 선언한다. $\beta_i$는 $\mathbf{b}_{i,f}$의 아래부터 3개의 원소를 원소로 가지는 벡터이다. 그러면 $\beta_i$는 아래와 같은 관계를 만족한다.
 
 $$
-\begin{pmatrix}b_{27}\\b_{28}\\b_{29}\end{pmatrix}=c_1\beta_1+c_2\beta_2+c_3\beta_3\\
+\begin{pmatrix}b_{27}\\b_{28}\\b_{29}\end{pmatrix}=\beta_f=c_1\beta_1+c_2\beta_2+c_3\beta_3\\
 =\begin{pmatrix}\beta_1&\beta_2&\beta_3\end{pmatrix}\begin{pmatrix}c_1\\c_2\\c_3\end{pmatrix}=B\mathbf{c}
 $$
 
