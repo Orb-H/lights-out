@@ -416,12 +416,14 @@ A\mathbf{x}_f=c_1A\chi_1+c_2A\chi_2+c_3A\chi_3\\
 }
 $$
 
-여기에 $\mathbf{b}_f=\mathbf{b}+A\mathbf{x}_{+}$이고 $\mathbf{b}_f$ $\mathbf{0}=\mathbf{b}_f+A\mathbf{x}_f$이므로 아래와 같은 관계식을 만족할 것이다.
+여기에 앞에서 얻었던 관계식을 사용하면 아래와 같이 될 것이다.
 
 $$
 \displaylines{
-\mathbf{x}=\mathbf{x}_{+}+\mathbf{x}_f=\mathbf{x}_{+}+c_1\chi_1+c_2\chi_2+c_3\chi_3
-A\mathbf{x}=\mathbf{b}_0=A\mathbf{x}_{+}+\mathbf{b}_f=A\mathbf{x}_{+}+c_1A\chi_1+c_2A\chi_2+c_3A\chi_3\\
+\mathbf{b}_f=\mathbf{b}+A\mathbf{x}_{+},\mathbf{0}=\mathbf{b}_f+A\mathbf{x}_f\\
+\mathbf{x}=\mathbf{x}_{+}+\mathbf{x}_f=\mathbf{x}_{+}+c_1\chi_1+c_2\chi_2+c_3\chi_3\\
+A\mathbf{x}=A\mathbf{x}_{+}+A\mathbf{x}_f=\mathbf{b}\\
+=A\mathbf{x}_{+}+\mathbf{b}_f=A\mathbf{x}_{+}+c_1A\chi_1+c_2A\chi_2+c_3A\chi_3=\mathbf{b}\\
 }
 $$
 
