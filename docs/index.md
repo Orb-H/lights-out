@@ -505,4 +505,4 @@ $$
 
 아래 4개의 행이 모두 0이다. 즉, $\text{rank}(A)=12,\text{nullity}(A)=4$이다. 이것은 $\text{null}(A)$의 기저 $A'$에 대해 $\mathbf{b}=A\mathbf{x}$를 만족하는 $\mathbf{x}$가 존재한다면 $\mathbf{x}'=\mathbf{x}+\sum_{i=1}^4 \alpha_i n_i,\alpha_i\in\mathbb{Z}_2^4,n_i\in A'$ 또한 위 방정식의 해가 된다는 의미이다. 즉, 위의 식을 만족하는 모든 $\mathbf{x}'$에 대해 $\mathbf{b}=A\mathbf{x}'$이다.
 
-기존의 방법대로 분석을 해본 결과 $\text{null}(A)=4=\text{null}(B)$임을 알아내었다. 또한 특정 보드에 대해 해가 존재한다면 반드시 16개인 점 또한 같다.(물론 $\text{nullity}(A)=\text{nullity}(B)$인 점에서 당연히 같다.)
+기존의 방법대로 분석을 해본 결과 $\text{nullity}(A)=4=\text{nullity}(B)$임을 알아내었다. 또한 특정 보드에 대해 해가 존재한다면 반드시 16개인 점 또한 같다.(물론 $\text{nullity}(A)=\text{nullity}(B)$인 점에서 당연히 같다.)
