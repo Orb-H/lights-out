@@ -505,15 +505,15 @@ $$
 
 아래 4개의 행이 모두 0이다. 즉, $\text{rank}(A)=12,\text{nullity}(A)=4$이다. 이것은 $\text{null}(A)$의 기저 $A'$에 대해 $\mathbf{b}=A\mathbf{x}$를 만족하는 $\mathbf{x}$가 존재한다면 $\mathbf{x}'=\mathbf{x}+\sum_{i=1}^4 \alpha_i n_i,\alpha_i\in\mathbb{Z}_2^4,n_i\in A'$ 또한 위 방정식의 해가 된다는 의미이다. 즉, 위의 식을 만족하는 모든 $\mathbf{x}'$에 대해 $\mathbf{b}=A\mathbf{x}'$이다.
 
-기존의 방법대로 분석을 해본 결과 $\text{nullity}(A)=4=\text{nullity}(B)$임을 알아내었다. 또한 특정 보드에 대해 해가 존재한다면 반드시 16개인 점 또한 같다.(물론 $\text{nullity}(A)=\text{nullity}(B)$인 점에서 당연히 같다.) 다만 행렬 $B$로 $chi_i$가 어떻게 될지는 알아낼 수 없다. 하지만 $A$로는 가능하다. 이를 구해보면 아래와 같이 된다.
+기존의 방법대로 분석을 해본 결과 $\text{nullity}(A)=4=\text{nullity}(B)$임을 알아내었다. 또한 특정 보드에 대해 해가 존재한다면 반드시 16개인 점 또한 같다.(물론 $\text{nullity}(A)=\text{nullity}(B)$인 점에서 당연히 같다.) 다만 행렬 $B$로 $\chi_i$가 어떻게 될지는 알아낼 수 없다. 하지만 $A$로는 가능하다. 이를 구해보면 아래와 같이 된다.
 
 $$
 \displaylines{
 C\mathbf{y}=\mathbf{0}\\
 \begin{pmatrix}y_1+y_{14}+y_{15}+y_{16}\\y_2+y_{13}+y_{14}+y_{16}\\y_3+y_{13}+y_{15}+y_{16}\\y_4+y_{13}+y_{14}+y_{15}\\y_5+y_{13}+y_{15}\\y_6+y_{16}\\y_7+y_{13}\\y_8+y_{14}+y_{16}\\y_9+y_{13}+y_{14}\\y_{10}+y_{13}+y_{14}+y_{15}\\y_{11}+y_{14}+y_{15}+y_{16}\\y_{12}+y_{15}+y_{16}\end{pmatrix}\\
-\text{Let}```(t,u,v,w)=(y_{13},y_{14},y_{15},y_{16})\\
+\text{Let} ```(t,u,v,w)=(y_{13},y_{14},y_{15},y_{16})\\
 \mathbf{y}=\begin{pmatrix}u+v+w\\t+u+w\\t+v+w\\t+u+v\\t+v\\w\\t\\u+w\\t+u\\t+u+v\\u+v+w\\v+w\\t\\u\\v\\w\end{pmatrix}=\begin{pmatrix}0\\1\\1\\1\\1\\0\\1\\0\\1\\1\\0\\0\\1\\0\\0\\0\end{pmatrix}t+\begin{pmatrix}1\\1\\0\\1\\0\\0\\0\\1\\1\\1\\1\\0\\0\\1\\0\\0\end{pmatrix}u+\begin{pmatrix}1\\0\\1\\1\\1\\0\\0\\0\\0\\1\\1\\1\\0\\0\\1\\0\end{pmatrix}v+\begin{pmatrix}1\\1\\1\\0\\0\\1\\0\\1\\0\\0\\1\\1\\0\\0\\0\\1\end{pmatrix}w=n_tt+n_uu+n_vv+n_ww\\
-A'=null(A)=\begin{pmatrix}n_t,n_u,n_v,n_w\end{pmatrix}
+A'=\text{null}(A)=\begin{pmatrix}n_t,n_u,n_v,n_w\end{pmatrix}
 }
 $$
 
