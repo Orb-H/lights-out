@@ -416,7 +416,7 @@ A\mathbf{x}_f=c_1A\chi_1+c_2A\chi_2+c_3A\chi_3\\
 }
 $$
 
-이제 $\mathbf{b}$를 $\mathbf{b}_f$로 만드는 $\mathbf{x}_{+}$와 $\mathbf{b}_f$를 $\mathbf{0}$응로 만드는 $\mathbf{x}_f$를 연속으로 적용하면 $\mathbf{b}$를 $\mathbf{0}$으로 만들 수 있을 것이다.
+여기에 $\mathbf{b}_f=\mathbf{b}+A\mathbf{x}_{+}$이고 $\mathbf{b}_f$ $\mathbf{0}=\mathbf{b}_f+A\mathbf{x}_f$이므로 아래와 같은 관계식을 만족할 것이다.
 
 $$
 \displaylines{
@@ -505,7 +505,7 @@ $$
 
 아래 4개의 행이 모두 0이다. 즉, $\text{rank}(A)=12,\text{nullity}(A)=4$이다. 이것은 $\text{null}(A)$의 기저 $A'$에 대해 $\mathbf{b}=A\mathbf{x}$를 만족하는 $\mathbf{x}$가 존재한다면 $\mathbf{x}'=\mathbf{x}+\sum_{i=1}^4 \alpha_i n_i,\alpha_i\in\mathbb{Z}_2^4,n_i\in A'$ 또한 위 방정식의 해가 된다는 의미이다. 즉, 위의 식을 만족하는 모든 $\mathbf{x}'$에 대해 $\mathbf{b}=A\mathbf{x}'$이다.
 
-기존의 방법대로 분석을 해본 결과 $\text{nullity}(A)=4=\text{nullity}(B)$임을 알아내었다. 또한 특정 보드에 대해 해가 존재한다면 반드시 16개인 점 또한 같다.(물론 $\text{nullity}(A)=\text{nullity}(B)$인 점에서 당연히 같다.) 다만 행렬 $B$로 $\n_i$가 어떻게 될지는 알아낼 수 없다. 하지만 $A$로는 가능하다. 이를 구해보면 아래와 같이 된다.
+기존의 방법대로 분석을 해본 결과 $\text{nullity}(A)=4=\text{nullity}(B)$임을 알아내었다. 또한 특정 보드에 대해 해가 존재한다면 반드시 16개인 점 또한 같다.(물론 $\text{nullity}(A)=\text{nullity}(B)$인 점에서 당연히 같다.) 다만 행렬 $B$로 $n_i$가 어떻게 될지는 알아낼 수 없다. 하지만 $A$로는 가능하다. 이를 구해보면 아래와 같이 된다.
 
 $$
 \displaylines{
