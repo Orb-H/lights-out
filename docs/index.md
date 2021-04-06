@@ -359,8 +359,8 @@ $$
 
 $$
 \displaylines{
-\mathbf{b}_f=\mathbf{b}+A\mathbf{x}_f
-\mathbf{b}_f=\mathbf{b}_2=\mathbf{b}_1+A\mathbf{x}_2=\mathbf{b}_0+A\mathbf{x}_1+A\mathbf{x}_2=\mathbf{b}+A(\mathbf{x}_1+\mathbf{x}_2\\
+\mathbf{b}_f=\mathbf{b}+A\mathbf{x}_f\\
+\mathbf{b}_f=\mathbf{b}_2=\mathbf{b}_1+A\mathbf{x}_2=\mathbf{b}_0+A\mathbf{x}_1+A\mathbf{x}_2=\mathbf{b}+A(\mathbf{x}_1+\mathbf{x}_2)\\
 \mathbf{x}_{+}=\mathbf{x}_1+\mathbf{x}_2=\begin{pmatrix}0\\0\\0\\b_{01}\\b_{02}\\b_{03}\\\sum_{\mathbf{b}_0} m(1,2,4)\\\sum_{\mathbf{b}_0} m(1,2,3,5)\\\sum_{\mathbf{b}_0} m(2,3,6)\end{pmatrix}
 }
 $$
