@@ -452,7 +452,7 @@ B^{-1}=\begin{pmatrix}1&1&0\\1&1&1\\0&1&1\end{pmatrix}\\
 \therefore\mathbf{c}=B^{-1}\begin{pmatrix}b_{27}\\b_{28}\\b_{29}\end{pmatrix}=\begin{pmatrix}b_{27}+b_{28}\\b_{27}+b_{28}+b_{29}\\b_{28}+b_{29}\end{pmatrix}\\
 \mathbf{x}=\mathbf{x}_{+}+X\mathbf{c}=\begin{pmatrix}0\\0\\0\\b_{01}\\b_{02}\\b_{03}\\\sum_{\mathbf{b}_0} m(1,2,4)\\\sum_{\mathbf{b}_0} m(1,2,3,5)\\\sum_{\mathbf{b}_0} m(2,3,6)\end{pmatrix}+\begin{pmatrix}b_{27}+b_{28}\\b_{27}+b_{28}+b_{29}\\b_{28}+b_{29}\\b_{29}\\b_{28}\\b_{27}\\b_{27}+b_{29}\\0\\b_{27}+b_{29}\end{pmatrix}\\
 =\begin{pmatrix}0\\0\\0\\b_{1}\\b_{2}\\b_{3}\\\sum_{\mathbf{b}} m(1,2,4)\\\sum_{\mathbf{b}} m(1,2,3,5)\\\sum_{\mathbf{b}} m(2,3,6)\end{pmatrix}+\begin{pmatrix}\sum_{\mathbf{b}} m(1,3,6,7,8)\\\sum_{\mathbf{b}} m(5,7,8,9)\\\sum_{\mathbf{b}} m(1,3,4,8,9)\\\sum_{\mathbf{b}} m(1,3,5,6,9)\\\sum_{\mathbf{b}} m(4,5,6,8)\\\sum_{\mathbf{b}} m(1,3,4,5,7)\\\sum_{\mathbf{b}} m(4,6,7,9)\\0\\\sum_{\mathbf{b}} m(4,6,7,9)\end{pmatrix}=\begin{pmatrix}\sum_{\mathbf{b}} m(1,3,6,7,8)\\\sum_{\mathbf{b}} m(5,6,7,9)\\\sum_{\mathbf{b}} m(1,3,4,8,9)\\\sum_{\mathbf{b}} m(3,5,6,9)\\\sum_{\mathbf{b}} m(2,4,5,6,8)\\\sum_{\mathbf{b}} m(1,4,5,7)\\\sum_{\mathbf{b}} m(1,2,6,7,9)\\\sum_{\mathbf{b}} m(1,2,3,5)\\\sum_{\mathbf{b}} m(2,3,4,7,9)\end{pmatrix}\\
-=\begin{pmatrix}1&0&1&0&0&1&1&1&0\\0&0&0&0&1&0&1&1&1\\1&0&1&1&0&0&0&1&1\\0&0&1&0&1&1&0&0&1\\0&1&0&1&1&1&0&1&0\\1&0&0&1&1&0&1&0&0\\110&0&0&0&1&1&0&1\\110&1&0&1&0&0&0&0\\0&1&1&1&0&0&1&0&1\end{pmatrix}\mathbf{b}
+=\begin{pmatrix}1&0&1&0&0&1&1&1&0\\0&0&0&0&1&0&1&1&1\\1&0&1&1&0&0&0&1&1\\0&0&1&0&1&1&0&0&1\\0&1&0&1&1&1&0&1&0\\1&0&0&1&1&0&1&0&0\\1&0&0&0&0&1&1&0&1\\1&0&1&0&1&0&0&0&0\\0&1&1&1&0&0&1&0&1\end{pmatrix}\mathbf{b}
 }
 $$
 
