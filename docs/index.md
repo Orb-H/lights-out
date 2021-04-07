@@ -488,7 +488,7 @@ X=\begin{pmatrix}1&0&0&0&1&1&0&0&1&0&1&0&0&1&1&1\\0&1&0&0&1&1&1&0&0&0&0&1&1&1&0&
 }
 $$
 
-$\mathbf{x}_{+}$는 보드에 따라 항상 한 가지의 경우가 나오기 때문에 보드의 해인 $\mathbf{x}$의 가능한 가짓수는 $\mathbf{c}$의 가짓수인 $2^4=16$가지가 된다. 이제 단순히 행렬을 가지고 푸는 방법을 사용해서 해석해보겠다.
+$\mathbf{x}_{+}$는 해가 존재하는 보드에 대해 항상 한 가지의 경우가 나오기 때문에 보드의 해인 $\mathbf{x}$의 가능한 가짓수는 $\mathbf{c}$의 가짓수인 $2^4=16$가지가 된다. 이제 단순히 행렬을 가지고 푸는 방법을 사용해서 해석해보겠다.
 
 $\mathbf{b}=A\mathbf{x}$로 나타낼 수 있었는데, 여기서 행렬 $A$를 분석해보면 아래와 같다.
 
@@ -507,7 +507,7 @@ $$
 
 아래 4개의 행이 모두 0이다. 즉, $\text{rank}(A)=12,\text{nullity}(A)=4$이다. 이것은 $\text{null}(A)$의 기저 $A'$에 대해 $\mathbf{b}=A\mathbf{x}$를 만족하는 $\mathbf{x}$가 존재한다면 $\mathbf{x}'=\mathbf{x}+\sum_{i=1}^4 \alpha_i n_i,\alpha_i\in\mathbb{Z}_2^4,n_i\in A'$ 또한 위 방정식의 해가 된다는 의미이다. 즉, 위의 식을 만족하는 모든 $\mathbf{x}'$에 대해 $\mathbf{b}=A\mathbf{x}'$이다.
 
-기존의 방법대로 분석을 해본 결과 $\text{nullity}(A)=4=\text{nullity}(B)$임을 알아내었다. 또한 특정 보드에 대해 해가 존재한다면 반드시 16개인 점 또한 같다.(물론 $\text{nullity}(A)=\text{nullity}(B)$인 점에서 당연히 같다.) 이제 행렬 $B$로 구한 $\chi_i$와 행렬 $A$로 구하는 $\text{null}A$가 다른지 알아볼 차례이다. $A$로 구해보면 아래와 같이 된다.
+기존의 방법대로 분석을 해본 결과 $\text{nullity}(A)=4=\text{nullity}(B)$임을 알아내었다. 또한 특정 보드에 대해 해가 존재한다면 반드시 16개인 점 또한 같다.(물론 $\text{nullity}(A)=\text{nullity}(B)$인 점에서 당연히 같다.) 이제 행렬 $B$로 구한 $\chi_i$와 행렬 $A$로 구하는 $A'$가 다른지 알아볼 차례이다. $A$로 구해보면 아래와 같이 된다.
 
 $$
 \displaylines{
@@ -515,7 +515,7 @@ C\mathbf{y}=\mathbf{0}\\
 \begin{pmatrix}y_1+y_{14}+y_{15}+y_{16}\\y_2+y_{13}+y_{14}+y_{16}\\y_3+y_{13}+y_{15}+y_{16}\\y_4+y_{13}+y_{14}+y_{15}\\y_5+y_{13}+y_{15}\\y_6+y_{16}\\y_7+y_{13}\\y_8+y_{14}+y_{16}\\y_9+y_{13}+y_{14}\\y_{10}+y_{13}+y_{14}+y_{15}\\y_{11}+y_{14}+y_{15}+y_{16}\\y_{12}+y_{15}+y_{16}\end{pmatrix}\\
 \text{Let}(t,u,v,w)=(y_{13},y_{14},y_{15},y_{16})\\
 \mathbf{y}=\begin{pmatrix}u+v+w\\t+u+w\\t+v+w\\t+u+v\\t+v\\w\\t\\u+w\\t+u\\t+u+v\\u+v+w\\v+w\\t\\u\\v\\w\end{pmatrix}=\begin{pmatrix}0\\1\\1\\1\\1\\0\\1\\0\\1\\1\\0\\0\\1\\0\\0\\0\end{pmatrix}t+\begin{pmatrix}1\\1\\0\\1\\0\\0\\0\\1\\1\\1\\1\\0\\0\\1\\0\\0\end{pmatrix}u+\begin{pmatrix}1\\0\\1\\1\\1\\0\\0\\0\\0\\1\\1\\1\\0\\0\\1\\0\end{pmatrix}v+\begin{pmatrix}1\\1\\1\\0\\0\\1\\0\\1\\0\\0\\1\\1\\0\\0\\0\\1\end{pmatrix}w=n_tt+n_uu+n_vv+n_ww\\
-A'=\text{null}(A)=\begin{pmatrix}n_t,n_u,n_v,n_w\end{pmatrix}
+A'=\begin{pmatrix}n_t,n_u,n_v,n_w\end{pmatrix},null(A)=span(A')
 }
 $$
 
@@ -525,6 +525,6 @@ $$
 Y_A=\begin{pmatrix}0&1&1&1\\1&1&0&1\\1&0&1&1\\1&1&1&0\end{pmatrix}Y_B
 $$
 
-Row equivalence의 성질에 따라 두 행렬의 관계를 나타내는 invertible한 행렬이 존재하면 두 행렬은 row equivalent하다. 즉, $\text{span}(Y_A)=\text{span}(Y_B)$이고 $\text{null}(A)=\text{null}(X)$이다.
+Row equivalence의 성질에 따라 두 행렬의 관계를 나타내는 invertible한 행렬이 존재하면 두 행렬은 row equivalent하다. 즉, $\text{span}(Y_A)=\text{span}(Y_B)$이고 $\text{null}(A)=\text{span}(X)$이다.
 
 *다른 보드는 모두 $\text{nullity}(A)=0$이었기 때문에 해당 내용을 확인하지 않았다.*
