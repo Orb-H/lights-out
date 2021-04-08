@@ -483,7 +483,7 @@ $$
 $$
 \displaylines{
 X=\begin{pmatrix}1&0&0&0&1&1&0&0&1&0&1&0&0&1&1&1\\0&1&0&0&1&1&1&0&0&0&0&1&1&1&0&1\\0&0&1&0&0&1&1&1&1&0&0&0&1&0&1&1\\0&0&0&1&0&0&1&1&0&1&0&1&1&1&1&0\end{pmatrix}^T\\
-\mathbf{c}=\begin{pmatrix}\*\\\*\\\*\\\*\end{pmatrix}\\
+\mathbf{c}=\begin{pmatrix}*\\*\\*\\*\end{pmatrix}\\
 \mathbf{x}=\mathbf{x}_{+}+X\mathbf{c}
 }
 $$
