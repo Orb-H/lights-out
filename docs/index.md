@@ -512,7 +512,7 @@ $$
 $$
 \displaylines{
 C\mathbf{y}=\mathbf{0}\\
-\begin{pmatrix}y_1+y_{14}+y_{15}+y_{16}\\y_2+y_{13}+y_{14}+y_{16}\\y_3+y_{13}+y_{15}+y_{16}\\y_4+y_{13}+y_{14}+y_{15}\\y_5+y_{13}+y_{15}\\y_6+y_{16}\\y_7+y_{13}\\y_8+y_{14}+y_{16}\\y_9+y_{13}+y_{14}\\y_{10}+y_{13}+y_{14}+y_{15}\\y_{11}+y_{14}+y_{15}+y_{16}\\y_{12}+y_{15}+y_{16}\end{pmatrix}\\
+\begin{pmatrix}y_1+y_{14}+y_{15}+y_{16}\\y_2+y_{13}+y_{14}+y_{16}\\y_3+y_{13}+y_{15}+y_{16}\\y_4+y_{13}+y_{14}+y_{15}\\y_5+y_{13}+y_{15}\\y_6+y_{16}\\y_7+y_{13}\\y_8+y_{14}+y_{16}\\y_9+y_{13}+y_{14}\\y_{10}+y_{13}+y_{14}+y_{15}\\y_{11}+y_{14}+y_{15}+y_{16}\\y_{12}+y_{15}+y_{16}\end{pmatrix}=\mathbf{0}\\
 \text{Let}(t,u,v,w)=(y_{13},y_{14},y_{15},y_{16})\\
 \mathbf{y}=\begin{pmatrix}u+v+w\\t+u+w\\t+v+w\\t+u+v\\t+v\\w\\t\\u+w\\t+u\\t+u+v\\u+v+w\\v+w\\t\\u\\v\\w\end{pmatrix}=\begin{pmatrix}0\\1\\1\\1\\1\\0\\1\\0\\1\\1\\0\\0\\1\\0\\0\\0\end{pmatrix}t+\begin{pmatrix}1\\1\\0\\1\\0\\0\\0\\1\\1\\1\\1\\0\\0\\1\\0\\0\end{pmatrix}u+\begin{pmatrix}1\\0\\1\\1\\1\\0\\0\\0\\0\\1\\1\\1\\0\\0\\1\\0\end{pmatrix}v+\begin{pmatrix}1\\1\\1\\0\\0\\1\\0\\1\\0\\0\\1\\1\\0\\0\\0\\1\end{pmatrix}w=n_tt+n_uu+n_vv+n_ww\\
 A'=\begin{pmatrix}n_t,n_u,n_v,n_w\end{pmatrix},null(A)=span(A')
