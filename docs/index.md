@@ -528,3 +528,79 @@ $$
 Row equivalence의 성질에 따라 두 행렬의 관계를 나타내는 invertible한 행렬이 존재하면 두 행렬은 row equivalent하다. 즉, $\text{span}(Y_A)=\text{span}(Y_B)$이고 $\text{null}(A)=\text{span}(X)$이다.
 
 *다른 보드는 모두 $\text{nullity}(A)=0$이었기 때문에 해당 내용을 확인하지 않았다.*
+
+### 5. 5x5 보드
+
+*마찬가지로 여기도 $\mathbb{Z}_2$ 위에서 연산을 진행한다.*
+
+*5x5를 하는 이유는 이 경우가 조금 특이한 경우이기 때문이다.*
+
+같은 방식으로 진행하면 아래와 같이 된다.
+
+$$
+\displaylines{
+\mathbf{x}_{+}=\begin{pmatrix}0\\0\\0\\0\\0\\b_{1}\\b_{2}\\b_{3}\\b_{4}\\b_5\\\sum_{\mathbf{b}} m(1,2,6)\\\sum_{\mathbf{b}} m(1,2,3,7)\\\sum_{\mathbf{b}} m(2,3,4,8)\\\sum_{\mathbf{b}} m(3,4,5,9)\\\sum_{\mathbf{b} m(4,5,10)\\\sum_{\mathbf{b}} m(1,3,6,7,11)\\\sum_{\mathbf{b}} m(4,6,7,8,12)\\\sum_{\mathbf{b}} m(1,5,7,8,9,13)\\\sum_{\mathbf{b}} m(2,8,9,10,14)\\\sum_{mathbf{b}} m(3,5,9,10,15)\\\sum_{\mathbf{b}} m(2,3,4,6,8,11,12,16)\\\sum_{\mathbf{b}} m(1,2,4,5,9,11,12,13,17)\\\sum_{\mathbf{b}} m(1,3,5,6,10,12,13,14,18)\\\sum_{\mathbf{b}} m(1,2,4,5,7,13,14,15,19)\\\sum_{\mathbf{b}} m(2,3,4,8,10,14,15,20)\end{pmatrix}\\
+\mathbf{b}_f=\begin{pmatrix}0\\0\\...\\0\\\sum_{\mathbf{b}} m(5,7,8,9,11,13,16,17,21)\\\sum_{\mathbf{b}} m(4,6,7,9,10,14,16,17,18,22)\\\sum_{\mathbf{b}} m(3,6,8,10,11,15,17,18,19,23)\\\sum_{\mathbf{b}} m(2,6,7,9,10,12,18,19,20,24)\\\sum_{\mathbf{b}} m(1,7,8,9,13,15,19,20,25)\end{pmatrix}\\
+B=\begin{pmatrix}\beta_1&\beta_2&\beta_3&\beta_4&\beta_5\end{pmatrix}=\begin{pmatrix}0&1&1&0&1\\1&1&1&0&0\\1&1&0&1&1\\0&0&1&1&1\\1&0&1&1&0\end{pmatrix}
+}
+$$
+
+마찬가지로 $B$의 역행렬의 존재성을 따져보면 존재하지 않는다. RREF로 만들어보면 $\text{nullity}(B)=2$이고 $\text{null}(B)$의 기저는 아래와 같다.
+
+$$
+null(B)=span(\begin{pmatrix}0\\1\\1\\1\\0\end{pmatrix},\begin{pmatrix}1\\0\\1\\0\\1\end{pmatrix})
+$$
+
+이 성질을 이용하여 $\mathbf{c}$를 구해보면 아래와 같다.
+
+$$
+\displaylines{
+\beta_f=\begin{pmatrix}b_{f21}&b_{f22}&b_{f23}&b_{f24}&b_{f25}\end{pmatrix}^T=B\mathbf{c}\\
+\begin{pmatrix}b_{f21}+b_{f22}\\b_{f22}+b_{f25}\\b_{f24}\\b_{f21}+b_{f23}+b_{f25}\\b_{f22}+b_{f23}+b_{f24}\end{pmatrix}=\begin{pmatrix}1&0&0&0&1\\0&1&0&1&0\\0&0&1&1&1\\0&0&0&0&0\\0&0&0&0&0\end{pmatrix}\mathbf{c}\\
+\mathbf{c}=\begin{pmatrix}b_{f21}+b_{f22}\\b_{f22}+b_{f25}\\b_{f24}\\0\\0\end{pmatrix}+\alpha_1\begin{pmatrix}0\\1\\1\\1\\0\end{pmatrix}+\alpha_2\begin{pmatrix}1\\0\\1\\0\\1\end{pmatrix}(\alpha_i\in\mathbb{Z}_2,b_{f22}+b_{f23}+b_{f24}=0,b_{f21}+b_{f23}+b_{f25}=0)
+}
+$$
+
+해의 형태를 보면 두 선형독립인 벡터가 존재한다. 즉, 괄호에 속하는 조건을 만족하면 해가 $2^2=4$개 존재하는 것이다. 이 사실을 이용해서 아래와 같이 계산해보면 주어진 보드에 대해 해가 어떻게 되는지 알 수 있다. 또한 $\mathbf{x}=\mathbf{x}_{+}+X\mathbf{c}$이고 $\mathbf{x}_{+}$는 해가 존재하는 보드에 대해 항상 한 가지의 경우가 나오기 때문에 보드의 해인 $\mathbf{x}$의 가능한 가짓수는 $\mathbf{c}$의 가짓수인 $2^2=4$가지가 된다. 이제 단순히 행렬을 가지고 푸는 방법을 사용할 차례이다.
+
+$\mathbf{b}=A\mathbf{x}$로 나타낼 수 있었는데, 여기서 행렬 $A$는 아래와 같다.
+
+$$
+A=\begin{pmatrix}Z_5&I_5&O_5&O_5&O_5\\I_5&Z_5&I_5&O_5&O_5\\O_5&I_5&Z_5&I_5&O_5\\O_5&O_5&I_5&Z_5&I_5\\O_5&O_5&O_5&I_5&Z_5\end{pmatrix}
+$$
+
+이 행렬 $A$를 실수배 연산을 제외한 Elementary Row Operation을 사용해서 RREF 형태로 만들어보면 아래와 같이 된다.
+
+$$
+A\rightarrow C=\begin{pmatrix}\begin{pmatrix}I_23&\begin{pmatrix}0&1\\1&0\\1&1\\1&0\\0&1\\1&1\\0&0\\1&1\\0&0\\1&1\\1&0\\1&0\\0&0\\1&0\\1&0\\1&1\\0&0\\1&1\\0&0\\1&1\\0&1\\1&0\\1&1\end{pmatrix}\end{pmatrix}\\O\end{pmatrix}
+$$
+
+아래 2개의 행이 모두 0이므로 $\text{rank}(A)=23,\text{nullity}(A)=2$이다. 이것은 $\mathbf{b}=A\mathbf{x}$를 만족하는 $\mathbf{x}$가 존재한다면 $2^2=4$개씩 존재한다는 의미이다. 그리고 각 4개의 해는 하나의 해에 $\text{null}(A)$의 기저 $A'$의 선형결합을 더한 꼴이 된다. 각 기저를 구한 후 그려보면 아래와 같이 된다. 계산 과정은 보기에 번거로우므로 생략한다. (■=누르는 스위치)
+
+<table>
+<tbody>
+<tr>
+<td>■□■□■<br/>■□■□■<br/>□□□□□<br/>■□■□■<br/>■□■□■</td>
+<td>□■■■□<br/>■□■□■<br/>■■□■■<br/>■□■□■<br/>□■■■□</td>
+</tr>
+</tbody>
+</table>
+
+이제 $\mathbf{c}$와 $X$를 사용하여 null space의 기저를 구해보겠다. $\mathbf{x}_{+}$를 사용하여 구하면 아래와 같이 나온다.
+
+$$
+X=\begin{pmatrix}1&0&0&0&0&1&1&0&0&0&1&0&1&0&0&0&1&1&1&0&0&0&0&0&1\\0&1&0&0&0&1&1&1&0&0&0&0&0&1&0&1&1&0&1&1&0&0&0&1&0\\0&0&1&0&0&0&1&1&1&0&1&0&0&0&1&1&0&1&0&1&0&0&1&0&0\\0&0&0&1&0&0&0&1&1&1&0&1&0&0&0&1&1&0&1&1&0&1&0&0&0\\0&0&0&0&1&0&0&0&1&1&0&0&1&0&1&0&1&1&1&0&1&0&0&0&0\end{pmatrix}^T
+$$
+
+$\mathbf{c}$의 자유항인 두 벡터 $\mathbf{c}_1=\begin{pmatrix}0&1&1&1&0\end{pmatrix}^T$와 $\mathbf{c}_2=\begin{pmatrix}1&0&1&0&1\end{pmatrix}를 각각 X에 곱해보면 아래와 같이 된다.
+
+$$
+\displaylines{
+X\mathbf{c}_1=\begin{pmatrix}0&1&1&1&0&1&0&1&0&1&1&1&0&1&1&1&0&1&0&1&0&1&1&1&0\end{pmatrix}^T\\
+X\mathbf{c}_2=\begin{pmatrix}1&0&1&0&1&1&0&1&0&1&0&0&0&0&0&1&0&1&0&1&1&0&1&0&1\end{pmatrix}^T
+}
+$$
+
+두 벡터가 앞에서 구한 $\text{null}(A)$의 기저와 같다. 즉, $\text{null}(A)=\text{span}(X\mathbf{c}_1,X\mathbf{c}_2)$이다.
+
+해가 항상 존재하는 경우, 2단계를 진행할 필요가 없는 경우, 2단계에서 일부 경우에 대해서 해가 여러 개 존재하는 경우에 대해 $\text{nullity}(A)=\text{nullity}(B)$임은 물론이고 $\text{null}(A)=\text{span}(X\mathbf{c}_n)$임까지 확인했다.(단, $\mathbf{c}_n=B$의 null space의 기저벡터를 행렬로 나타낸 것)
