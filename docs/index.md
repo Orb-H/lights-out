@@ -603,4 +603,4 @@ $$
 
 두 벡터가 앞에서 구한 $\text{null}(A)$의 기저와 같다. 즉, $\text{null}(A)=\text{span}(X\mathbf{c}_1,X\mathbf{c}_2)$이다.
 
-해가 항상 존재하는 경우, 2단계를 진행할 필요가 없는 경우, 2단계에서 일부 경우에 대해서 해가 여러 개 존재하는 경우에 대해 $\text{nullity}(A)=\text{nullity}(B)$임은 물론이고 $\text{null}(A)=\text{span}(X\mathbf{c}_1,...,X\mathbf{c}_n})$임까지 확인했다.(단, $\mathbf{c}_i=\text{null}(B)$의 기저)
+해가 항상 존재하는 경우, 2단계를 진행할 필요가 없는 경우, 2단계에서 일부 경우에 대해서 해가 여러 개 존재하는 경우에 대해 $\text{nullity}(A)=\text{nullity}(B)$임은 물론이고 $\text{null}(A)=\text{span}(X\mathbf{c}_1,...,X\mathbf{c}_n)$임까지 확인했다.(단, $\mathbf{c}_i=\text{null}(B)$의 기저)
