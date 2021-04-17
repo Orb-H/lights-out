@@ -616,18 +616,8 @@ $$
 
 $\mathbf{b}_f$는 앞에서 정의한 방법에 따라 주어진 보드에 특정 스위치를 토글함으로써 가장 아랫줄만 남은 보드의 상태를 의미한다. 즉, n×n의 벡터에 대하여 아래의 n개의 원소만 값이 있고 나머지는 0인 벡터이다.
 
->
-$$
-\begin{document}
-\textbf{Theorem.} For any vector \mathbf{b}\in\mathbb{Z}_2^{n^2}, there exists a vector \mathbf{x}_{+}\in\mathbb{Z}_2^{n^2} and a vector \mathbf{b}_f\in\mathbb{Z}_2^{n^2} such that \mathbf{b}_f=\mathbf{b}+A_n\mathbf{x}_{+} and only lowermost $n$ elements of \mathbf{b}_f can be nonzero.
-\end{document}
-$$
+> **Theorem.** For any vector $\mathbf{b}\in\mathbb{Z}_2^{n^2}$, there exists a vector $\mathbf{x}_{+}\in\mathbb{Z}_2^{n^2}$ and a vector $\mathbf{b}_f\in\mathbb{Z}_2^{n^2}$ such that $\mathbf{b}_f=\mathbf{b}+A_n\mathbf{x}_{+}$ and only lowermost $n$ elements of $\mathbf{b}_f$ can be nonzero.
 
 이 정리는 더 작은 문제로 축소시켜서 증명할 수 있다.
 
->
-$$
-\begin{document}
-\textbf{Lemma.} For an integer $k(0\le k\lt n-1)$ and a vector \mathbf{b}_k\in\mathbb{Z}_2^{n^2} where uppermost $k\times n$ elements are all zero, there exists a vector \mathbf{x}_k\in\mathbb{Z}_2^{n^2} and a vector \mathbf{b}_{k+1}\in\mathbb{Z}_2^{n^2} such that $\mathbf{b}_{k+1}=\mathbf{b}_k+A\mathbf{x}_k$ and $(k+1)\times n$ elements of $\mathbf{b}_{k+1}$ are all zero.
-\end{document}
-$$
+> **Lemma.** For an integer $k(0\le k\lt n-1)$ and a vector $\mathbf{b}_k\in\mathbb{Z}_2^{n^2}$ where uppermost $k\times n$ elements are all zero, there exists a vector $\mathbf{x}_k\in\mathbb{Z}_2^{n^2}$ and a vector $\mathbf{b}_{k+1}\in\mathbb{Z}_2^{n^2}$ such that $\mathbf{b}_{k+1}=\mathbf{b}_k+A\mathbf{x}_k$ and $(k+1)\times n$ elements of $\mathbf{b}_{k+1}$ are all zero.
