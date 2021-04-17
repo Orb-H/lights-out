@@ -604,3 +604,23 @@ $$
 두 벡터가 앞에서 구한 $\text{null}(A)$의 기저와 같다. 즉, $\text{null}(A)=\text{span}(X\mathbf{c}_1,X\mathbf{c}_2)$이다.
 
 해가 항상 존재하는 경우, 2단계를 진행할 필요가 없는 경우, 2단계에서 일부 경우에 대해서 해가 여러 개 존재하는 경우에 대해 $\text{nullity}(A)=\text{nullity}(B)$임은 물론이고 $\text{null}(A)=\text{span}(X\mathbf{c}_1,...,X\mathbf{c}_n)$임까지 확인했다.(단, $\mathbf{c}_i=\text{null}(B)$의 기저)
+
+### 6. nxn 보드
+
+#### 1) $\mathbf{x}_{+},\mathbf{b}_f$ 계산
+
+##### (1) $\mathbf{b}_f$의 존재성
+
+$\mathbf{b}_f$는 앞에서 정의한 방법에 따라 주어진 보드에 특정 스위치를 토글함으로써 가장 아랫줄만 남은 보드의 상태를 의미한다. 즉, n×n의 벡터에 대하여 아래의 n개의 원소만 값이 있고 나머지는 0인 벡터이다.
+
+>
+$$
+\textbf{Theorem.}\text{ For any given board vector }\mathbf{b}\in\mathbb{Z}_2^{n^2}\text{, there exists a vector }\mathbf{x}_{+}\in\mathbb{Z}_2^{n^2}\text{ and a vector }\mathbf{b}_f\in\mathbb{Z}_2^{n^2}\text{ such that }\mathbf{b}_f=\mathbf{b}+A_n\mathbf{x}_{+}\text{ and only lowermost }n\text{ elements of }\mathbf{b}_f\text{ can be nonzero.}
+$$
+
+이 정리는 더 작은 문제로 축소시켜서 증명할 수 있다.
+
+>
+$$
+\textbf{Lemma.}\text{ For a vector }\mathbf{b}_k\in\mathbb{Z}_2^{n^2}\text{ where uppermost }k\times n\text{ elements are all zero and an integer }k(0\le k\lt (n-1))\text{, there exists a vector }\mathbf{x}_k\in\mathbb{Z}_2^{n^2}\text{ and a vector }\mathbf{b}_{k+1}\in\mathbb{Z}_2^{n^2}\text{ such that }\mathbf{b}_{k+1}=\mathbf{b}_k+A\mathbf{x}_k\text{ and }(k+1)\times n\text{ elements of }\mathbf{b}_{k+1}\text{ are all zero.}
+$$
