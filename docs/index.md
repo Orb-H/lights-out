@@ -1,4 +1,4 @@
-# Describing Greedy Solution of Lights Out Puzzle Using Linear Algebra
+# Analysis of Greedy Solution of Lights Out Puzzle Using Linear Algebra
 
 <script>
 MathJax = {
